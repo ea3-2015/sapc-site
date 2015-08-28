@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://localhost/sqldesigner/ -->
+<sql>
+    <datatypes db="mysql">
+        <group label="Numeric" color="rgb(238,238,170)">
+            <type label="Integer" length="0" sql="INTEGER" quote=""/>
+            <type label="TINYINT" length="0" sql="TINYINT" quote=""/>
+            <type label="SMALLINT" length="0" sql="SMALLINT" quote=""/>
+            <type label="MEDIUMINT" length="0" sql="MEDIUMINT" quote=""/>
+            <type label="INT" length="0" sql="INT" quote=""/>
+            <type label="BIGINT" length="0" sql="BIGINT" quote=""/>
+            <type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+            <type label="Single precision" length="0" sql="FLOAT" quote=""/>
+            <type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+        </group>
+
+        <group label="Character" color="rgb(255,200,200)">
+            <type label="Char" length="1" sql="CHAR" quote="'"/>
+            <type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+            <type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+            <type label="Binary" length="1" sql="BINARY" quote="'"/>
+            <type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+            <type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+        </group>
+
+        <group label="Date &amp; Time" color="rgb(200,255,200)">
+            <type label="Date" length="0" sql="DATE" quote="'"/>
+            <type label="Time" length="0" sql="TIME" quote="'"/>
+            <type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+            <type label="Year" length="0" sql="YEAR" quote=""/>
+            <type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+        </group>
+
+        <group label="Miscellaneous" color="rgb(200,200,255)">
+            <type label="ENUM" length="1" sql="ENUM" quote=""/>
+            <type label="SET" length="1" sql="SET" quote=""/>
+            <type label="Bit" length="0" sql="bit" quote=""/>
+        </group>
+    </datatypes>
+    <table x="240" y="26" name="users">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="username" null="0" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+        </row>
+        <row name="password" null="0" autoincrement="0">
+            <datatype>VARCHAR(100)</datatype>
+        </row>
+        <row name="email" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="group_id" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <relation table="groups" row="id" />
+        </row>
+        <row name="person_id" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <relation table="people" row="id" />
+        </row>
+        <row name="created" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="modified" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <key type="UNIQUE" name="">
+            <part>username</part>
+        </key>
+    </table>
+    <table x="619" y="27" name="people">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="name" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="last_name" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="sex" null="1" autoincrement="0">
+            <datatype>CHAR(1)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="user_id" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="created" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="modified" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+    </table>
+    <table x="447" y="26" name="groups">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="name" null="0" autoincrement="0">
+            <datatype>VARCHAR(80)</datatype>
+        </row>
+        <row name="created" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="modified" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+    </table>
+    <table x="49" y="30" name="noticias">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="title" null="0" autoincrement="0">
+            <datatype>VARCHAR(60)</datatype>
+        </row>
+        <row name="content" null="1" autoincrement="0">
+            <datatype>MEDIUMTEXT</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="user_id" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <relation table="users" row="id" />
+        </row>
+        <row name="created" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="modified" null="1" autoincrement="0">
+            <datatype>DATETIME</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+    </table>
+    <table x="40" y="305" name="acos">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INTEGER(10)</datatype>
+        </row>
+        <row name="parent_id" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="model" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="foreign_key" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="alias" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="lft" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="rght" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <key type="INDEX" name="idx_acos_lft_rght">
+            <part>lft</part>
+            <part>rght</part>
+        </key>
+        <key type="INDEX" name="idx_acos_alias">
+            <part>alias</part>
+        </key>
+        <comment>app\Config\Schema\db_acl.sql</comment>
+    </table>
+    <table x="479" y="325" name="aros">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INTEGER(10)</datatype>
+        </row>
+        <row name="parent_id" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="model" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="foreign_key" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="alias" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="lft" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="rght" null="1" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <key type="INDEX" name="idx_aros_lft_rght">
+            <part>lft</part>
+            <part>rght</part>
+        </key>
+        <key type="INDEX" name="idx_aros_alias">
+            <part>alias</part>
+        </key>
+        <comment>app\Config\Schema\db_acl.sql</comment>
+    </table>
+    <table x="278" y="310" name="aros_acos">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INTEGER(10)</datatype>
+        </row>
+        <row name="aco_id" null="0" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <relation table="acos" row="id" />
+        </row>
+        <row name="aro_id" null="0" autoincrement="0">
+            <datatype>INTEGER(10)</datatype>
+            <relation table="aros" row="id" />
+        </row>
+        <row name="_create" null="0" autoincrement="0">
+            <datatype>CHAR(2)</datatype>
+            <default>'0'</default>
+        </row>
+        <row name="_read" null="0" autoincrement="0">
+            <datatype>CHAR(2)</datatype>
+            <default>'0'</default>
+        </row>
+        <row name="_update" null="0" autoincrement="0">
+            <datatype>CHAR(2)</datatype>
+            <default>'0'</default>
+        </row>
+        <row name="_delete" null="0" autoincrement="0">
+            <datatype>CHAR(2)</datatype>
+            <default>'0'</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <key type="INDEX" name="idx_aco_id">
+            <part>aco_id</part>
+        </key>
+        <comment>app\Config\Schema\db_acl.sql</comment>
+    </table>
+    <table x="718" y="339" name="i18n">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(10)</datatype>
+        </row>
+        <row name="locale" null="0" autoincrement="0">
+            <datatype>VARCHAR(6)</datatype>
+        </row>
+        <row name="model" null="0" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+        </row>
+        <row name="foreign_key" null="0" autoincrement="0">
+            <datatype>INT(10)</datatype>
+        </row>
+        <row name="field" null="0" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+        </row>
+        <row name="content" null="1" autoincrement="0">
+            <datatype>MEDIUMTEXT</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <key type="INDEX" name="locale">
+            <part>locale</part>
+        </key>
+        <key type="INDEX" name="model">
+            <part>model</part>
+        </key>
+        <key type="INDEX" name="row_id">
+            <part>foreign_key</part>
+        </key>
+        <key type="INDEX" name="field">
+            <part>field</part>
+        </key>
+        <comment>Tabla de Internacionalización para CakePHP</comment>
+    </table>
+    <table x="954" y="376" name="cake_sessions">
+        <row name="id" null="0" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+        </row>
+        <row name="data" null="1" autoincrement="0">
+            <datatype>MEDIUMTEXT</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="expires" null="1" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <default>NULL</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <comment>app\Config\Schema\sessions.sql</comment>
+    </table>
+</sql>
