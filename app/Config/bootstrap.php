@@ -70,6 +70,9 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
+CakePlugin::loadAll();
+
+
 /**
  * To prefer app translation over plugin translation, you can set
  *
