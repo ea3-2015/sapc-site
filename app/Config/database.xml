@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: http://localhost/sqldesigner/ -->
 <sql>
@@ -84,9 +84,9 @@
             <datatype>VARCHAR(255)</datatype>
             <default>NULL</default>
         </row>
-        <row name="sex" null="1" autoincrement="0">
-            <datatype>CHAR(1)</datatype>
-            <default>NULL</default>
+        <row name="genre_id" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <relation table="genres" row="id" />
         </row>
         <row name="created" null="1" autoincrement="0">
             <datatype>DATETIME</datatype>
@@ -315,5 +315,18 @@
             <part>id</part>
         </key>
         <comment>app\Config\Schema\sessions.sql</comment>
+    </table>
+    <table x="853" y="27" name="genres">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="name" null="0" autoincrement="0">
+            <datatype>VARCHAR(20)</datatype>
+            <comment>Masculino o Femenino</comment>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <comment>Género (Masculino o Femenino)</comment>
     </table>
 </sql>

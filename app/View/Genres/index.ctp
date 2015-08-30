@@ -1,9 +1,9 @@
 <!-- View baked using a 'pretty_cake' template (http://git.io/NtTU). -->
-<h2><?php echo __('People'); ?></h2>
+<h2><?php echo __('Genres'); ?></h2>
 
-<div id="people-index" class="panel panel-default">
+<div id="genres-index" class="panel panel-default">
 	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo __('People' . ' list'); ?></h3>
+		<h3 class="panel-title"><?php echo __('Genres' . ' list'); ?></h3>
 	</div>
 
 	<div class="panel-body" style="overflow: auto;">
@@ -13,38 +13,28 @@
 				<tr>
 					<th><?php echo $this->Paginator->sort('id'); ?></th>
 					<th><?php echo $this->Paginator->sort('name'); ?></th>
-					<th><?php echo $this->Paginator->sort('last_name'); ?></th>
-					<th><?php echo $this->Paginator->sort('genre_id'); ?></th>
-					<th><?php echo $this->Paginator->sort('created'); ?></th>
-					<th><?php echo $this->Paginator->sort('modified'); ?></th>
 					<th style="border-collapse: collapse; white-space: nowrap; width: 1px;"><?php echo __('Actions'); ?></th>
 				</tr>
 			</thead>
 
 			<tbody>
-	<?php foreach ($people as $person): ?>
+	<?php foreach ($genres as $genre): ?>
 				<tr>
-					<td><?php echo h($person['Person']['id']); ?></td>
-					<td><?php echo h($person['Person']['name']); ?></td>
-					<td><?php echo h($person['Person']['last_name']); ?></td>
-					<td>
-						<?php echo $this->Html->link($person['Genre']['name'], array('controller' => 'genres', 'action' => 'view', $person['Genre']['id'])); ?>
-					</td>
-					<td><?php echo h($person['Person']['created']); ?></td>
-					<td><?php echo h($person['Person']['modified']); ?></td>
+					<td><?php echo h($genre['Genre']['id']); ?></td>
+					<td><?php echo h($genre['Genre']['name']); ?></td>
 					<td class="text-center" style="min-width: 8em;">
 						<div class="btn-group" role="group">
 
-							<?php echo $this->Html->link(__('View'), array('action' => 'view', $person['Person']['id']), array('class' => 'btn btn-default btn-sm')); ?>
+							<?php echo $this->Html->link(__('View'), array('action' => 'view', $genre['Genre']['id']), array('class' => 'btn btn-default btn-sm')); ?>
 							<a href="#" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								<span class="fa fa-caret-down"></span>
 								<span class="sr-only">Toggle Dropdown</span>
 							</a>
 
 							<ul class="dropdown-menu" role="menu">
-								<li><?php echo $this->Html->link('<i class="fa fa-edit fa-fw"></i> ' . __('Edit'), array('action' => 'edit', $person['Person']['id']), array('escape' => false)); ?></li>
+								<li><?php echo $this->Html->link('<i class="fa fa-edit fa-fw"></i> ' . __('Edit'), array('action' => 'edit', $genre['Genre']['id']), array('escape' => false)); ?></li>
 
-								<li><?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __('Delete'), array('action' => 'delete', $person['Person']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $person['Person']['id'])); ?></li>
+								<li><?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __('Delete'), array('action' => 'delete', $genre['Genre']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $genre['Genre']['id'])); ?></li>
 							</ul>
 
 						</div>
@@ -126,7 +116,7 @@
 	<div class="panel-footer">
 		<div class="btn-toolbar" role="toolbar">
 			<div class="btn-group" role="group">
-				<?php echo $this->Html->link(__('New Person'), array('action' => 'add'), array('class' => 'btn btn-primary')); ?>
+				<?php echo $this->Html->link(__('New Genre'), array('action' => 'add'), array('class' => 'btn btn-primary')); ?>
 			</div>
 
 			<div class="btn-group dropup" role="group">
@@ -135,10 +125,8 @@
 				</button>
 
 				<ul class="dropdown-menu" role="menu">
-					<li><?php echo $this->Html->link(__('List Genres'), array('controller' => 'genres', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New Genre'), array('controller' => 'genres', 'action' => 'add')); ?> </li>
-					<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('List People'), array('controller' => 'people', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('New Person'), array('controller' => 'people', 'action' => 'add')); ?> </li>
 				</ul>
 			</div>
 		</div>

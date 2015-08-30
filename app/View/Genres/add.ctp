@@ -1,17 +1,17 @@
 <!-- View baked using a 'pretty_cake' template (http://git.io/NtTU). -->
 
-<h2><?php echo __('Person'); ?></h2>
+<h2><?php echo __('Genre'); ?></h2>
 
-<div id="people-add" class="panel panel-default">
+<div id="genres-add" class="panel panel-default">
 
 	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo __('Add Person'); ?></h3>
+		<h3 class="panel-title"><?php echo __('Add Genre'); ?></h3>
 	</div>
 
 	<div class="panel-body" style="overflow: auto;">
 
 <?php
-	echo $this->Form->create('Person', array(
+	echo $this->Form->create('Genre', array(
 		'inputDefaults' => array(
 			'label' => array('class' => 'control-label'),
 			'div' => 'form-group',
@@ -22,8 +22,6 @@
 	<fieldset>
 	<?php
 			echo $this->Form->input('name');
-			echo $this->Form->input('last_name');
-			echo $this->Form->input('genre_id');
 	?>
 	</fieldset>
 <?php
@@ -41,7 +39,7 @@
 		<div class="btn-toolbar" role="toolbar">
 
 			<div class="btn-group" role="group">
-				<?php echo $this->Html->link(__('List People'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
+				<?php echo $this->Html->link(__('List Genres'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
 			</div>
 
 			<div class="btn-group dropup" role="group">
@@ -50,10 +48,8 @@
 				</button>
 
 				<ul class="dropdown-menu" role="menu">
-					<li><?php echo $this->Html->link(__('List Genres'), array('controller' => 'genres', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New Genre'), array('controller' => 'genres', 'action' => 'add')); ?> </li>
-					<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('List People'), array('controller' => 'people', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('New Person'), array('controller' => 'people', 'action' => 'add')); ?> </li>
 				</ul>
 			</div>
 

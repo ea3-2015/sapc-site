@@ -1,12 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Person Model
+ * Genre Model
  *
- * @property Genre $Genre
- * @property User $User
+ * @property Person $Person
  */
-class Person extends AppModel {
+class Genre extends AppModel {
 
 /**
  * Validation rules
@@ -14,9 +13,9 @@ class Person extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'genre_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+		'name' => array(
+			'notBlank' => array(
+				'rule' => array('notBlank'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -29,29 +28,14 @@ class Person extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'Genre' => array(
-			'className' => 'Genre',
-			'foreignKey' => 'genre_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
-/**
  * hasMany associations
  *
  * @var array
  */
 	public $hasMany = array(
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'person_id',
+		'Person' => array(
+			'className' => 'Person',
+			'foreignKey' => 'genre_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
