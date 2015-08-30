@@ -21,11 +21,6 @@
 			<?php echo h($person['Person']['sex']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('User'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($person['User']['id'], array('controller' => 'users', 'action' => 'view', $person['User']['id'])); ?>
-			&nbsp;
-		</dd>
 		<dt><?php echo __('Created'); ?></dt>
 		<dd>
 			<?php echo h($person['Person']['created']); ?>

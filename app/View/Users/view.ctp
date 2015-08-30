@@ -104,7 +104,6 @@
 		<th><?php echo __('Name'); ?></th>
 		<th><?php echo __('Last Name'); ?></th>
 		<th><?php echo __('Sex'); ?></th>
-		<th><?php echo __('User Id'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
@@ -115,7 +114,6 @@
 			<td><?php echo $person['name']; ?></td>
 			<td><?php echo $person['last_name']; ?></td>
 			<td><?php echo $person['sex']; ?></td>
-			<td><?php echo $person['user_id']; ?></td>
 			<td><?php echo $person['created']; ?></td>
 			<td><?php echo $person['modified']; ?></td>
 			<td class="actions">

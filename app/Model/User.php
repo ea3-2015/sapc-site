@@ -6,7 +6,6 @@ App::uses('AppModel', 'Model');
  * @property Group $Group
  * @property Person $Person
  * @property Noticia $Noticia
- * @property Person $Person
  */
 class User extends AppModel {
 
@@ -90,19 +89,6 @@ class User extends AppModel {
 	public $hasMany = array(
 		'Noticia' => array(
 			'className' => 'Noticia',
-			'foreignKey' => 'user_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		),
-		'Person' => array(
-			'className' => 'Person',
 			'foreignKey' => 'user_id',
 			'dependent' => false,
 			'conditions' => '',

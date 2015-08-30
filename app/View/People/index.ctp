@@ -7,7 +7,6 @@
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('last_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('sex'); ?></th>
-			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
@@ -20,9 +19,6 @@
 		<td><?php echo h($person['Person']['name']); ?>&nbsp;</td>
 		<td><?php echo h($person['Person']['last_name']); ?>&nbsp;</td>
 		<td><?php echo h($person['Person']['sex']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($person['User']['id'], array('controller' => 'users', 'action' => 'view', $person['User']['id'])); ?>
-		</td>
 		<td><?php echo h($person['Person']['created']); ?>&nbsp;</td>
 		<td><?php echo h($person['Person']['modified']); ?>&nbsp;</td>
 		<td class="actions">

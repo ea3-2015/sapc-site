@@ -7,7 +7,6 @@
 		echo $this->Form->input('name');
 		echo $this->Form->input('last_name');
 		echo $this->Form->input('sex');
-		echo $this->Form->input('user_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
