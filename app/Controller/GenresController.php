@@ -49,10 +49,10 @@ class GenresController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Genre->create();
 			if ($this->Genre->save($this->request->data)) {
-				$this->Session->setFlash(__('The genre has been saved.'));
+				$this->Flash->success(__('The genre has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The genre could not be saved. Please, try again.'));
+				$this->Flash->error(__('The genre could not be saved. Please, try again.'));
 			}
 		}
 	}
@@ -70,10 +70,10 @@ class GenresController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Genre->save($this->request->data)) {
-				$this->Session->setFlash(__('The genre has been saved.'));
+				$this->Flash->success(__('The genre has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The genre could not be saved. Please, try again.'));
+				$this->Flash->error(__('The genre could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Genre.' . $this->Genre->primaryKey => $id));
@@ -95,9 +95,9 @@ class GenresController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Genre->delete()) {
-			$this->Session->setFlash(__('The genre has been deleted.'));
+			$this->Flash->success(__('The genre has been deleted.'));
 		} else {
-			$this->Session->setFlash(__('The genre could not be deleted. Please, try again.'));
+			$this->Flash->error(__('The genre could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

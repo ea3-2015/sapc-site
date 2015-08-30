@@ -49,10 +49,10 @@ class PeopleController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Person->create();
 			if ($this->Person->save($this->request->data)) {
-				$this->Session->setFlash(__('The person has been saved.'));
+				$this->Flash->success(__('The person has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The person could not be saved. Please, try again.'));
+				$this->Flash->error(__('The person could not be saved. Please, try again.'));
 			}
 		}
 		$genres = $this->Person->Genre->find('list');
@@ -72,10 +72,10 @@ class PeopleController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Person->save($this->request->data)) {
-				$this->Session->setFlash(__('The person has been saved.'));
+				$this->Flash->success(__('The person has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The person could not be saved. Please, try again.'));
+				$this->Flash->error(__('The person could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('Person.' . $this->Person->primaryKey => $id));
@@ -99,9 +99,9 @@ class PeopleController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Person->delete()) {
-			$this->Session->setFlash(__('The person has been deleted.'));
+			$this->Flash->success(__('The person has been deleted.'));
 		} else {
-			$this->Session->setFlash(__('The person could not be deleted. Please, try again.'));
+			$this->Flash->error(__('The person could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}

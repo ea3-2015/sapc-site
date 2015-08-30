@@ -3,7 +3,6 @@ App::uses('GenresController', 'Controller');
 
 /**
  * GenresController Test Case
- *
  */
 class GenresControllerTest extends ControllerTestCase {
 

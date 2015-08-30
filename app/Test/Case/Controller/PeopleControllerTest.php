@@ -3,7 +3,6 @@ App::uses('PeopleController', 'Controller');
 
 /**
  * PeopleController Test Case
- *
  */
 class PeopleControllerTest extends ControllerTestCase {
 
