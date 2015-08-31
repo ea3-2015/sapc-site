@@ -81,7 +81,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">S.A.P.C Estado G&uacutearico</a>
+      <a class="navbar-brand" href="#">S.A.P.C del Estado G&uacutearico</a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
