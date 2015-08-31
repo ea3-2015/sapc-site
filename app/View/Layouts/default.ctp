@@ -1,79 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <?php echo $this->Html->meta('icon'); ?>
-        <title>
-            C.A:
-            <?php echo $this->fetch('title'); ?>
-        </title>
-        <?php
-       /* Llamado de los CSS */
+
+    <?= $this->Html->meta('icon'); ?>
+
+    <title>
+        S.A.P.C.:<?= $this->fetch('title'); ?>
+    </title>
+    <?php
         echo $this->Html->css(array('style'));
         echo $this->Html->css(array('bootstrap.min'));
 
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
-
-
-       /* -------------------------------------------*/
-       echo $this->Html->script(array('jquery-2.1.3'));
-       echo $this->Html->script(array('script'));
-       echo $this->Html->script(array('bootstrap.min'));
-
-       // echo $this->Html->script(array('',''));
-       // echo $this->Html->script(array('modernizr.foundation.js'));
-
+        echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('script'));
+        echo $this->Html->script(array('bootstrap.min'));
     ?>
 
-  </head>
-   <style type="text/css">
-            .navbar-static-top {
-  margin-bottom:20px;
-}
+    <style type="text/css">
+      .navbar-static-top {
+        margin-bottom:20px;
+      }
 
-i {
-  font-size:16px;
-}
+      i {
+        font-size:16px;
+      }
 
-.nav > li > a {
-  color:#787878;
-}
+      .nav > li > a {
+        color:#787878;
+      }
 
-footer {
-  margin-top:20px;
-  padding-top:20px;
-  padding-bottom:20px;
-  background-color:#efefef;
-}
+      footer {
+        margin-top:20px;
+        padding-top:20px;
+        padding-bottom:20px;
+        background-color:#efefef;
+      }
 
-/* count indicator near icons */
-.nav>li .count {
-  position: absolute;
-  bottom: 12px;
-  right: 6px;
-  font-size: 9px;
-  background: rgba(51,200,51,0.55);
-  color: rgba(255,255,255,0.9);
-  line-height: 1em;
-  padding: 2px 4px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-}
+      /* count indicator near icons */
+      .nav>li .count {
+        position: absolute;
+        bottom: 12px;
+        right: 6px;
+        font-size: 9px;
+        background: rgba(51,200,51,0.55);
+        color: rgba(255,255,255,0.9);
+        line-height: 1em;
+        padding: 2px 4px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+      }
 
-/* indent 2nd level */
-.list-unstyled li > ul > li {
-   margin-left:10px;
-   padding:8px;
-}
-        </style>
+      /* indent 2nd level */
+      .list-unstyled li > ul > li {
+         margin-left:10px;
+         padding:8px;
+      }
+    </style>
+</head>
+
 <body class="left-sidebar">
 
 
