@@ -13,13 +13,13 @@
         S.A.P.C.:<?= $this->fetch('title'); ?>
     </title>
     <?php
-        echo $this->Html->css(array('style'));
+        echo $this->Html->css(array('styles'));
         echo $this->Html->css(array('bootstrap.min'));
 
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
         echo $this->Html->script(array('jquery-2.1.3'));
-        echo $this->Html->script(array('script'));
+        echo $this->Html->script(array('scripts'));
         echo $this->Html->script(array('bootstrap.min'));
     ?>
 
