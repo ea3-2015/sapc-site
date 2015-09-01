@@ -34,6 +34,3 @@ class AppController extends Controller
 {
     public $components = array('Session', 'Flash', 'DebugKit.Toolbar');
 }
-class ToolbarComponent extends Controller {
-	public $components = array('DebugKit.Toolbar');
-}

@@ -59,10 +59,11 @@ class NoticiasController extends AppController
         if ($this->request->is('post')) {
             $this->Noticia->create();
             if ($this->Noticia->save($this->request->data)) {
-                $this->Flash->success(__('The noticia has been saved.'));
+                $this->Flash->success(__('Noticia Guardada.'));
+               
                 return $this->redirect(array('action' => 'index'));
             } else {
-                $this->Flash->error(__('The noticia could not be saved. Please, try again.'));
+                $this->Flash->error(__('Noticia no guardada, intente de nuevo.'));
             }
            
         }
@@ -93,6 +94,8 @@ class NoticiasController extends AppController
             $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
             $this->request->data = $this->Noticia->find('first', $options);
         }
+        $users = $this->Noticia->User->find('list');
+            $this->set(compact('users'));
     }
 
 /**

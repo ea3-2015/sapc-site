@@ -168,7 +168,7 @@
       </ul>
       <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> Panel Principal</strong></a>
                 <div class="alert alert-info">
-                    <?php echo $this->Session->flash(); ?>
+                    <?php echo $this->Flash->render(); ?>
                   </div>
         <hr>
 

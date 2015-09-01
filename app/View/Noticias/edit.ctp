@@ -1,13 +1,10 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
 
-<h2><?php echo __('Noticia'); ?></h2>
+<h2><?php echo __('Editar Noticia'); ?></h2>
 
 <div id="noticias-edit" class="panel panel-default">
 
-	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo __('Edit Noticia'); ?></h3>
-	</div>
-
+	
 	<div class="panel-body" style="overflow: auto;">
 
 <?php
@@ -22,14 +19,17 @@
 	<fieldset>
 	<?php
 			echo $this->Form->input('id');
-			echo $this->Form->input('title');
-			echo $this->Form->input('content');
-			echo $this->Form->input('user_id');
+			echo $this->Form->input('title',array(
+					'label'=>'Titulo','class'=>'form-control'));
+			echo $this->Form->input('content',array(
+					'label'=>'Contenido','class'=>'form-control'));
+			echo $this->Form->input('user_id',array(
+					'label'=>'Autor','class'=>'form-control'));
 	?>
 	</fieldset>
 <?php
 	echo $this->Form->end(array(
-		'label' => __('Update'),
+		'label' => __('Actualizar'),
 		'div' => array(
 			'class' => 'form-group'
 		),

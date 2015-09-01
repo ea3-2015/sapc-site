@@ -1,6 +1,6 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
 
-<h2><?php echo __('Noticias'); ?></h2>
+<h2><?php echo __('Añadir Noticia'); ?></h2>
 
 <div id="noticias-add" class="panel panel-default">
 

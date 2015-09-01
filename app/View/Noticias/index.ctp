@@ -29,22 +29,18 @@
 					</td>
 					<td><?php echo h($noticia['Noticia']['created']); ?></td>
 					
-					<td class="text-center" style="min-width: 8em;">
-						<div class="btn-group" role="group">
+					<td class="actions">
+						
 
-							<?php echo $this->Html->link(__('View'), array('action' => 'view', $noticia['Noticia']['id']), array('class' => 'btn btn-default btn-sm')); ?>
-							<a href="#" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-								<span class="fa fa-caret-down"></span>
-								<span class="sr-only">Toggle Dropdown</span>
-							</a>
+							<?php echo $this->Html->link(__(''), array('action' => 'view', $noticia['Noticia']['id']), array('class' => 'glyphicon glyphicon-search')); ?>
+							
+							
+							<?php echo $this->Html->link('<i class="fa fa-edit fa-fw"></i> ' . __(''), array('action' => 'edit', $noticia['Noticia']['id']), array('escape' => false)); ?>
 
-							<ul class="dropdown-menu" role="menu">
-								<li><?php echo $this->Html->link('<i class="fa fa-edit fa-fw"></i> ' . __('Edit'), array('action' => 'edit', $noticia['Noticia']['id']), array('escape' => false)); ?></li>
-
-								<li><?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __('Delete'), array('action' => 'delete', $noticia['Noticia']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $noticia['Noticia']['id'])); ?></li>
+								<?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __(''), array('action' => 'delete', $noticia['Noticia']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $noticia['Noticia']['id'])); ?>
 							</ul>
 
-						</div>
+						
 					</td>
 				</tr>
 	<?php endforeach; ?>
@@ -58,21 +54,21 @@
 			</paginador>
 			</center>
 	<div class="panel-footer">
-		<div class="btn-toolbar" role="toolbar">
+		<div class="btn-group btn-group-justified" >
+			
 			<div class="btn-group" role="group">
-				<?php echo $this->Html->link(__('New Noticia'), array('action' => 'add'), array('class' => 'btn btn-primary')); ?>
+				<?php echo $this->Html->link(__('Nueva Noticia'), array('action' => 'add'), array('class' => 'btn btn-primary')); ?>
 			</div>
-
-			<div class="btn-group dropup" role="group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-					<?php echo __('Other actions'); ?> <span class="caret"></span>
-				</button>
-
-				<ul class="dropdown-menu" role="menu">
-					<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-				</ul>
+			<div class="btn-group" role="group">
+				<?php echo $this->Html->link(__('Lista de Usuarios'), array('controller'=>'users','action' => 'index'), array('class' => 'btn btn-danger')); ?>
 			</div>
+			<div class="btn-group" role="group">
+				<?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-info')); ?>
+			</div>
+			
+			
 		</div>
+
+		
 	</div>
 </div>

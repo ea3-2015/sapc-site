@@ -8,7 +8,7 @@ App::uses('AppModel', 'Model');
  * @property Noticia $Noticia
  */
 class User extends AppModel {
-	public $displayField = 'id';
+	public $displayField = 'username';
 /**
  * Validation rules
  *
