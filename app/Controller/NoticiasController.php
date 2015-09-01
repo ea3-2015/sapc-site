@@ -14,7 +14,12 @@ class NoticiasController extends AppController
  *
  * @var array
  */
-    public $components = array('Paginator');
+    public $helpers = array('Html','Form','Time','Js');
+    public $components = array('Paginator', 'Session','RequestHandler');
+    public $paginate = array (
+            'limit' => 2,
+            'order' => array('Noticia.title' => 'asc')
+            );
 
 /**
  * index method
@@ -24,7 +29,8 @@ class NoticiasController extends AppController
     public function index()
     {
         $this->Noticia->recursive = 0;
-        $this->set('noticias', $this->Paginator->paginate());
+        $this->Paginator->settings =$this->paginate;
+            $this->set('noticias',$this->paginate());
     }
 
 /**
@@ -58,7 +64,10 @@ class NoticiasController extends AppController
             } else {
                 $this->Flash->error(__('The noticia could not be saved. Please, try again.'));
             }
+           
         }
+           $users = $this->Noticia->User->find('list');
+            $this->set(compact('users'));
     }
 
 /**

@@ -1,12 +1,10 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
 
-<h2><?php echo __('Noticia'); ?></h2>
+<h2><?php echo __('Noticias'); ?></h2>
 
 <div id="noticias-add" class="panel panel-default">
 
-	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo __('Add Noticia'); ?></h3>
-	</div>
+	
 
 	<div class="panel-body" style="overflow: auto;">
 
@@ -21,14 +19,17 @@
 
 	<fieldset>
 	<?php
-			echo $this->Form->input('title');
-			echo $this->Form->input('content');
-			echo $this->Form->input('user_id');
+			echo $this->Form->input('title',array(
+					'label'=>'Titulo','class'=>'form-control'));
+			echo $this->Form->input('content',array(
+					'label'=>'Contenido','class'=>'form-control'));
+			echo $this->Form->input('user_id',array(
+					'label'=>'Usuario','class'=>'form-control'));
 	?>
 	</fieldset>
 <?php
 	echo $this->Form->end(array(
-		'label' => __('Create'),
+		'label' => __('Crear'),
 		'div' => array(
 			'class' => 'form-group'
 		),
@@ -38,23 +39,19 @@
 	</div>
 
 	<div class="panel-footer">
-		<div class="btn-toolbar" role="toolbar">
-
+		<div class="btn-group btn-group-justified" >
+			
 			<div class="btn-group" role="group">
-				<?php echo $this->Html->link(__('List Noticias'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
+				<?php echo $this->Html->link(__('Lista de Noticias'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
 			</div>
-
-			<div class="btn-group dropup" role="group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-					<?php echo __('Related actions'); ?> <span class="caret"></span>
-				</button>
-
-				<ul class="dropdown-menu" role="menu">
-					<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-				</ul>
+			<div class="btn-group" role="group">
+				<?php echo $this->Html->link(__('Lista de Usuarios'), array('controller'=>'users','action' => 'index'), array('class' => 'btn btn-danger')); ?>
 			</div>
-
+			<div class="btn-group" role="group">
+				<?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-info')); ?>
+			</div>
+			
+			
 		</div>
 
 

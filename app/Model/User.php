@@ -8,7 +8,7 @@ App::uses('AppModel', 'Model');
  * @property Noticia $Noticia
  */
 class User extends AppModel {
-
+	public $displayField = 'id';
 /**
  * Validation rules
  *
@@ -91,14 +91,7 @@ class User extends AppModel {
 			'className' => 'Noticia',
 			'foreignKey' => 'user_id',
 			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
+			
 		)
 	);
 
