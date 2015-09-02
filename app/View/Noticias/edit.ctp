@@ -1,4 +1,14 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
+<?php
+        echo $this->Html->css(array('styles'));
+        echo $this->Html->css(array('bootstrap.min'));
+
+        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
+
+        echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('scripts'));
+        echo $this->Html->script(array('bootstrap.min'));
+    ?>
 
 <h2><?php echo __('Editar Noticia'); ?></h2>
 
@@ -35,27 +45,27 @@
 		),
 		'class' => 'btn btn-success'
 	 ));
+
 ?>
 	</div>
 
 	<div class="panel-footer">
-		<div class="btn-toolbar" role="toolbar">
+		<div class="btn-group btn-group-justified" >
 
+			
 			<div class="btn-group" role="group">
-				<?php echo $this->Html->link(__('List Noticias'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Noticia.id')), array('class' => 'btn btn-danger'), __('Are you sure you want to delete # %s?', $this->Form->value('Noticia.id'))); ?>
+				<?php echo $this->Html->link(__('Lista de Noticias'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
 			</div>
-
-			<div class="btn-group dropup" role="group">
-				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-					<?php echo __('Related actions'); ?> <span class="caret"></span>
-				</button>
-
-				<ul class="dropdown-menu" role="menu">
-					<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-				</ul>
+			<div class="btn-group" role="group">
+				<?php echo $this->Html->link(__('Lista de Usuarios'), array('controller'=>'users','action' => 'index'), array('class' => 'btn btn-danger')); ?>
 			</div>
+			<div class="btn-group" role="group">
+				<?php echo $this->Html->link(__('Nueva Noticia'), array('action' => 'add'), array('class' => 'btn btn-info')); ?>
+			</div>
+				
+			
+
+			
 
 		</div>
 

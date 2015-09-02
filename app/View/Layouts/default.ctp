@@ -12,17 +12,7 @@
     <title>
         S.A.P.C.:<?= $this->fetch('title'); ?>
     </title>
-    <?php
-        echo $this->Html->css(array('styles'));
-        echo $this->Html->css(array('bootstrap.min'));
-
-        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
-
-        echo $this->Html->script(array('jquery-2.1.3'));
-        echo $this->Html->script(array('scripts'));
-        echo $this->Html->script(array('bootstrap.min'));
-    ?>
-
+    
     <style type="text/css">
       .navbar-static-top {
         margin-bottom:20px;
@@ -134,7 +124,7 @@
                 </li>
             </ul>
         </li>
-        <!-- <li class="nav-header">
+        <li class="nav-header">
         <a href="#" data-toggle="collapse" data-target="#menu3">
           <h5>Social Media <i class="glyphicon glyphicon-chevron-right"></i></h5>
           </a>
@@ -143,7 +133,7 @@
                 <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Facebook</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Twitter</a></li>
             </ul>
-        </li> -->
+        </li> 
       </ul>
       <hr>
          <a href="#"><strong>Devolpers:</strong></a></br>
@@ -222,7 +212,7 @@
 </div>
 <!-- /Main -->
 
-<footer class="text-center">Desarrollado por :<a href="https://www.facebook.com/emanuel.torresclemente"><strong> Emanuel Torres Clemente</strong></a></footer>
+<footer class="text-center">Desarrollado por :<a href="https://www.facebook.com/emanuel.torresclemente"><strong> Emanuel Torres Clemente</strong></a> & <a href="https://www.facebook.com/nelson6e65"><strong> Nelson Martell</strong></a></footer>
 
 
 
@@ -247,7 +237,7 @@
 
         $(document).ready(function() {
 
-            $(".alert").addClass("in").fadeOut(8000);
+            $(".alert").addClass("in").fadeOut(5000);
 
 /* swap open/close side menu icons */
 $('[data-toggle=collapse]').click(function(){

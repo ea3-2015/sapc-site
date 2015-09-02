@@ -1,30 +1,39 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
-<h2><?php echo __('People'); ?></h2>
+<?php
+        echo $this->Html->css(array('styles'));
+        echo $this->Html->css(array('bootstrap.min'));
+
+        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
+
+        echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('scripts'));
+        echo $this->Html->script(array('bootstrap.min'));
+    ?>
+
+<h2><?php echo __('Personas'); ?></h2>
 
 <div id="people-index" class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo __('People' . ' list'); ?></h3>
-	</div>
-
+	
 	<div class="panel-body" style="overflow: auto;">
 
 		<table class="table table-bordered">
 			<thead>
 				<tr>
-					<th><?php echo $this->Paginator->sort('id'); ?></th>
-					<th><?php echo $this->Paginator->sort('name'); ?></th>
-					<th><?php echo $this->Paginator->sort('last_name'); ?></th>
-					<th><?php echo $this->Paginator->sort('genre_id'); ?></th>
-					<th><?php echo $this->Paginator->sort('created'); ?></th>
-					<th><?php echo $this->Paginator->sort('modified'); ?></th>
-					<th style="border-collapse: collapse; white-space: nowrap; width: 1px;"><?php echo __('Actions'); ?></th>
+					
+					<th><?php echo $this->Paginator->sort('Nombres'); ?></th>
+					<th><?php echo $this->Paginator->sort('Apellidos'); ?></th>
+					<th><?php echo $this->Paginator->sort('Generos'); ?></th>
+					<th><?php echo $this->Paginator->sort('Creado'); ?></th>
+					<th><?php echo $this->Paginator->sort('Modificado')?></th>
+					
+					<th ><?php echo __('Actions'); ?></th>
 				</tr>
 			</thead>
 
 			<tbody>
 	<?php foreach ($people as $person): ?>
 				<tr>
-					<td><?php echo h($person['Person']['id']); ?></td>
+					
 					<td><?php echo h($person['Person']['name']); ?></td>
 					<td><?php echo h($person['Person']['last_name']); ?></td>
 					<td>
@@ -32,22 +41,19 @@
 					</td>
 					<td><?php echo h($person['Person']['created']); ?></td>
 					<td><?php echo h($person['Person']['modified']); ?></td>
-					<td class="text-center" style="min-width: 8em;">
-						<div class="btn-group" role="group">
+					
+					<td class="actions" >
+						
 
-							<?php echo $this->Html->link(__('View'), array('action' => 'view', $person['Person']['id']), array('class' => 'btn btn-default btn-sm')); ?>
-							<a href="#" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-								<span class="fa fa-caret-down"></span>
-								<span class="sr-only">Toggle Dropdown</span>
-							</a>
+							<?php echo $this->Html->link(__(''), array('action' => 'view', $person['Person']['id']), array('class' => 'glyphicon glyphicon-search')); ?>
+							
 
-							<ul class="dropdown-menu" role="menu">
-								<li><?php echo $this->Html->link('<i class="fa fa-edit fa-fw"></i> ' . __('Edit'), array('action' => 'edit', $person['Person']['id']), array('escape' => false)); ?></li>
+						<?php echo $this->Html->link(__(''), array('action' => 'edit', $person['Person']['id']), array('class' => 'glyphicon glyphicon-edit')); ?>
 
-								<li><?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __('Delete'), array('action' => 'delete', $person['Person']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $person['Person']['id'])); ?></li>
-							</ul>
+								<?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __(''), array('action' => 'delete', $person['Person']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $person['Person']['id'])); ?>
+							
 
-						</div>
+						
 					</td>
 				</tr>
 	<?php endforeach; ?>

@@ -1,4 +1,15 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
+<?php
+        echo $this->Html->css(array('styles'));
+        echo $this->Html->css(array('bootstrap.min'));
+
+        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
+
+        echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('scripts'));
+        echo $this->Html->script(array('bootstrap.min'));
+    ?>
+
 <h2><?php echo __('User'); ?></h2>
 
 <div id="users-view" class="panel panel-default">
