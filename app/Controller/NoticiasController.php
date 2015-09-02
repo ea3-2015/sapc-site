@@ -31,6 +31,7 @@ class NoticiasController extends AppController
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
+            $this->layout = 'general';
     }
 
 /**

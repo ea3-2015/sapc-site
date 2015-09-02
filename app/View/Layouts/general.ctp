@@ -8,6 +8,12 @@
         echo $this->Html->script(array('scripts2'));
         echo $this->Html->script(array('bootstrap.min2'));
     ?>
+<div class="contenedor_banner">
+  <div class="border_banner">
+    <img  src="../sapc-site/app/webroot/img/cabezal.png">
+  </div>
+
+</div>
 <nav class="navbar navbar-static">
     <div class="container">
       <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -15,9 +21,9 @@
       </a>
       <div class="nav-collapse collase">
         <ul class="nav navbar-nav">  
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><?php echo $this->Html->link(__(' Inicio'), array('controller' => 'pages', 'action' => 'index'), array('class'=>'glyphicon glyphicon-home')); ?> </li>
+          <li><?php echo $this->Html->link(__(' Vision'), array('controller' => 'pages', 'action' => 'index'), array('class'=>'glyphicon glyphicon-ok-sign')); ?> </li>
+          <li><?php echo $this->Html->link(__(' Mision'), array('controller' => 'pages', 'action' => 'index'), array('class'=>'glyphicon glyphicon-eye-open')); ?></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
@@ -36,10 +42,10 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Profile</a></li>
+              <li><a href="#">Entrar</a></li>
+              <li><a href="#">Perfil</a></li>
               <li class="divider"></li>
-              <li><a href="#">About</a></li>
+              <li><a href="#">Salir</a></li>
              </ul>
           </li>  
         </ul>
@@ -51,12 +57,14 @@
   <div class="container">
     <div class="row">
       <div class="col col-sm-6">
-        <h1><a href="#" title="scroll down for your viewing pleasure">BNW Template</a>
-          <p class="lead">2-column Layout + Theme for Bootstrap 3</p></h1>
+      
+      <?php echo $this->fetch('content'); ?>
+        <!-- <h1><a href="#" title="scroll down for your viewing pleasure">Secretaria de Asustos Parroquiales</a>
+          <p class="lead">2-column Layout + Theme for Bootstrap 3</p></h1> -->
       </div>
       <div class="col col-sm-6">
         <div class="well pull-right">
-          <img src="//placehold.it/280x100/E7E7E7">        
+         <img src="//placehold.it/280x100/E7E7E7">        
         </div>
       </div>
     </div>
@@ -65,10 +73,11 @@
   <div class="container">
 	<div class="row">
       <div class="col col-sm-12">
-        
+        <h1>TEXTO</h1>
         <div class="panel">
         <div class="panel-body">
-          You may want to put some news here  <span class="glyphicon glyphicon-heart-empty"></span>
+          <!-- You may want to put some news here  <span class="glyphicon glyphicon-heart-empty"></span> -->
+
         </div>
         </div>
         
@@ -82,56 +91,24 @@
 	<div class="row">
   			<div class="col col-sm-3">
               	<div id="sidebar">
-      			<ul class="nav nav-stacked">
-                    <li><h3 class="highlight">Channels <i class="glyphicon glyphicon-dashboard pull-right"></i></h3></li>
-                  	<li><a href="#">Link</a></li>
-          			<li><a href="#">Link</a></li>
-				</ul>
-                <div class="accordion" id="accordion2">
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                                Accordion
-                            </a>
-                        </div>
-                        <div id="collapseOne" class="accordion-body collapse in">
-                            <div class="accordion-inner">
-                              <p>There is a lot to be said about RWD.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                            <div class="accordion-heading">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                                    Accordion
-                                </a>
-                            </div>
-                            <div id="collapseTwo" class="accordion-body collapse">
-                                <div class="accordion-inner">
-                                  <p>Use @media queries or utility classes to customize responsiveness.</p>
-                                </div>
-                            </div>
-                        </div>
+      			<h1>TEXTO</h1>
+                    
                	</div>
                </div>
       		</div>  
       		<div class="col col-sm-9">
               <div class="panel">
-              <h1>The Top Stories from Around</h1>
+              <!-- <h1>The Top Stories from Around</h1> -->
               
               <div class="row">
               	<div class="col col-sm-8">
-                  <img src="http://s.bootply.com/assets/example/bg_iphone.png" class="img-responsive">
+                  
                 </div> 
         		<div class="col col-sm-4">
-                  <img src="//placehold.it/400x180/FF3333/FFF" class="img-responsive">
-                  <h4>Aside</h4>
-                  <hr>
-                  <img src="//placehold.it/400x180/FF3333/FFF" class="img-responsive">
-                  <h4>Aside 2</h4>
+                  
               	</div>   
               </div>
-                      <?php echo $this->fetch('content'); ?>
+                      
               	<h2>Content</h2>
                 Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
