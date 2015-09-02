@@ -11,16 +11,7 @@ endif;
 
 App::uses('Debugger', 'Utility');
 ?>
-<?php
-        echo $this->Html->css(array('styles'));
-        echo $this->Html->css(array('bootstrap.min'));
 
-        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
-
-        echo $this->Html->script(array('jquery-2.1.3'));
-        echo $this->Html->script(array('scripts'));
-        echo $this->Html->script(array('bootstrap.min'));
-    ?>
 
 <h2><?php echo __d('cake_dev', 'Release Notes for CakePHP %s.', Configure::version()); ?></h2>
 <p>

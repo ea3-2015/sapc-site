@@ -47,6 +47,7 @@ class NoticiasController extends AppController
         }
         $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
         $this->set('noticia', $this->Noticia->find('first', $options));
+        $this->layout = 'general';
     }
 
 /**
@@ -119,10 +120,7 @@ class NoticiasController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
-    public function general ()
-    {
-        
-    }
+    
     
 
 

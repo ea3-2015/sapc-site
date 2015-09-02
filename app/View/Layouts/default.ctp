@@ -6,7 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <?php
+        echo $this->Html->css(array('styles'));
+        echo $this->Html->css(array('bootstrap.min'));
 
+        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
+
+        echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('scripts'));
+        echo $this->Html->script(array('bootstrap.min'));
+    ?>
     <?= $this->Html->meta('icon'); ?>
 
     <title>

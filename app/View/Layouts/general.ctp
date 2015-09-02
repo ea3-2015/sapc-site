@@ -131,7 +131,7 @@
                   <h4>Aside 2</h4>
               	</div>   
               </div>
-        
+                      <?php echo $this->fetch('content'); ?>
               	<h2>Content</h2>
                 Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
                 dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores 
