@@ -1,5 +1,5 @@
 <?php
-        echo $this->Html->css(array('styles2'));
+        echo $this->Html->css(array('general'));
         echo $this->Html->css(array('bootstrap.min2'));
 
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
