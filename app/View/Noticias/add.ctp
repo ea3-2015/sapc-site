@@ -24,8 +24,9 @@
 			'label' => array('class' => 'control-label'),
 			'div' => 'form-group',
 			'class' => 'form-control',
+			
 		)
-	)); ?>
+	), array('type'=>'file', 'novalidate'=>'novalidate' )); ?>
 
 	<fieldset>
 	<?php
@@ -35,6 +36,10 @@
 					'label'=>'Contenido','class'=>'form-control'));
 			echo $this->Form->input('user_id',array(
 					'label'=>'Usuario','class'=>'form-control'));
+
+		   echo $this->Form->input('foto',array('type'=>'file','label'=>'','class'=>'form-control'));
+			echo $this->Form->input('foto_dir',array('type'=>'hidden'));
+							
 	?>
 	</fieldset>
 <?php

@@ -117,3 +117,4 @@ CakeLog::config('error', array(
 ));
 //DebugKit
 CakePlugin::load('DebugKit');
+CakePlugin::load('Upload');

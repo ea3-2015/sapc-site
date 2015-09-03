@@ -1,71 +1,37 @@
-<!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
-<?php
-        echo $this->Html->css(array('styles'));
-        echo $this->Html->css(array('bootstrap.min'));
+				<!-- Titulo -->
+                <?php foreach ($noticias as $noticia): ?>
+                <h1><?php echo h($noticia['Noticia']['title']); ?></h1>
 
-        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
+                
+                <hr>
 
-        echo $this->Html->script(array('jquery-2.1.3'));
-        echo $this->Html->script(array('scripts'));
-        echo $this->Html->script(array('bootstrap.min'));
-    ?>
+                <!-- FECHA -->
+                <p><span class="glyphicon glyphicon-time"></span> 
+							<?php echo h($noticia['Noticia']['modified']); ?></p>
 
+                <hr>
 
+                <!-- IMAGEN -->
+                <?php echo $this->Html->image('../files/noticia/foto/'. $noticia['Noticia']['foto_dir'].'/'.'vga_'.$noticia['Noticia']['foto']); ?>
 
-<div id="noticias-index" >
-		<div class="area_principal">
+                <hr>
+
+                <!-- CONTENIDO -->
+                <p class="lead">
+                	
+							<?php echo h($noticia['Noticia']['content']); ?>
+                </p>
+
+                
+
+                <!-- Posted Comments -->
+
+                <!-- Comment -->
+                
+
+            	
 			
-			<table>
-			<?php foreach ($noticias as $noticia): ?>
-				<thead>
-				<tr>
-					<th>
-						<div class="titulo_noticia"><?php echo h($noticia['Noticia']['title']); ?></div>
-						<br>
-					</th>
-				</tr>
-					<tr>
-						<th rowspan="2">
-							dfsdfs
-						</th>
-						
-						<th valign="top">
-							<div class="resumen_noticia">
-							<th><?php echo h($noticia['Noticia']['content']); ?></th>	
-							
-							</div>
-						</th>
-					</tr>
-				</thead>
-			
-		<tbody>
-			
-						<tr>
-							
-							<td>
-							<td>
-								
-							</td>
-							<td></td>
-							
-							
-						</tr>
+		
 			<?php endforeach; ?>
-					</tbody>
+					
 
-			</table>
-		</div>
-	<div class="panel-body" style="overflow: auto;">
-
-		
-
-	</div>
-		
-	<div class="panel-footer">
-		
-			
-		</div>
-
-		
-	</div>
-</div>
