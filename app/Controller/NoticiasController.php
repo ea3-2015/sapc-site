@@ -17,8 +17,8 @@ class NoticiasController extends AppController
     public $helpers = array('Html','Form','Time','Js');
     public $components = array('Paginator', 'Session','RequestHandler');
     public $paginate = array (
-            'limit' => 2,
-            'order' => array('Noticia.title' => 'asc')
+            'limit' => 3,
+            'order' => array('Noticias.title' => 'asc')
             );
 
 /**
@@ -31,7 +31,14 @@ class NoticiasController extends AppController
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
-          $this->layout = 'general';
+          
+    }
+    public function npublic()
+    {
+        $this->Noticia->recursive = 0;
+        $this->Paginator->settings =$this->paginate;
+            $this->set('noticias',$this->paginate());
+            $this->layout = 'general';
     }
     
 

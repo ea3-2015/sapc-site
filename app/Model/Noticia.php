@@ -12,7 +12,7 @@ class Noticia extends AppModel {
  *
  * @var array
  */
-	public $displayField = 'title';
+	public $displayField = 'id';
 	public $actsAs = array(
 			'Upload.Upload' => array(
 				'foto'=> array ( 
@@ -21,7 +21,7 @@ class Noticia extends AppModel {
 						),
 							'thumbnailMethod'=>'php',
 							'thumbnailSizes' => array(
-								'vga' => '900x300',
+								'vga' => '400x400',
 								 'thumb'=>'100x100'
 								 ),
 								'deleteOnUpdate' => true,
