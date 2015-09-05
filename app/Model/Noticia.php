@@ -12,6 +12,23 @@ class Noticia extends AppModel {
  *
  * @var array
  */
+	public $displayField = 'id';
+	public $actsAs = array(
+			'Upload.Upload' => array(
+				'foto'=> array ( 
+					'fields' => array(
+						'dir'=>'foto_dir'
+						),
+							'thumbnailMethod'=>'php',
+							'thumbnailSizes' => array(
+								'vga' => '400x400',
+								 'thumb'=>'100x100'
+								 ),
+								'deleteOnUpdate' => true,
+								'deleteFolderOnDelete' => true
+					   )
+				)
+		);
 	public $validate = array(
 		'title' => array(
 			'notBlank' => array(
