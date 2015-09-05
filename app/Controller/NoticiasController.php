@@ -17,8 +17,8 @@ class NoticiasController extends AppController
     public $helpers = array('Html','Form','Time','Js');
     public $components = array('Paginator', 'Session','RequestHandler');
     public $paginate = array (
-            'limit' => 2,
-            'order' => array('Noticia.title' => 'asc')
+            'limit' => 3,
+            'order' => array('Noticias.title' => 'asc')
             );
 
 /**
@@ -31,7 +31,16 @@ class NoticiasController extends AppController
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
+          
     }
+    public function npublic()
+    {
+        $this->Noticia->recursive = 0;
+        $this->Paginator->settings =$this->paginate;
+            $this->set('noticias',$this->paginate());
+            $this->layout = 'general';
+    }
+    
 
 /**
  * view method
@@ -43,11 +52,14 @@ class NoticiasController extends AppController
     public function view($id = null)
     {
         if (!$this->Noticia->exists($id)) {
-            throw new NotFoundException(__('Invalid noticia'));
+            throw new NotFoundException(__('Noticia Invalida'));
         }
         $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
         $this->set('noticia', $this->Noticia->find('first', $options));
+        $this->layout = 'general';
+        
     }
+    
 
 /**
  * add method
@@ -81,14 +93,14 @@ class NoticiasController extends AppController
     public function edit($id = null)
     {
         if (!$this->Noticia->exists($id)) {
-            throw new NotFoundException(__('Invalid noticia'));
+            throw new NotFoundException(__('Noticia Invalida'));
         }
         if ($this->request->is(array('post', 'put'))) {
             if ($this->Noticia->save($this->request->data)) {
-                $this->Flash->success(__('The noticia has been saved.'));
+                $this->Flash->success(__('Noticia Actualizada.'));
                 return $this->redirect(array('action' => 'index'));
             } else {
-                $this->Flash->error(__('The noticia could not be saved. Please, try again.'));
+                $this->Flash->error(__('Noticia no actualizada, intente de nuevo.'));
             }
         } else {
             $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
@@ -109,14 +121,18 @@ class NoticiasController extends AppController
     {
         $this->Noticia->id = $id;
         if (!$this->Noticia->exists()) {
-            throw new NotFoundException(__('Invalid noticia'));
+            throw new NotFoundException(__('Noticia Invalida'));
         }
         $this->request->allowMethod('post', 'delete');
         if ($this->Noticia->delete()) {
-            $this->Flash->success(__('The noticia has been deleted.'));
+            $this->Flash->success(__('Noticia Borrada.'));
         } else {
-            $this->Flash->error(__('The noticia could not be deleted. Please, try again.'));
+            $this->Flash->error(__('Noticia no borrada, intente de nuevo'));
         }
         return $this->redirect(array('action' => 'index'));
     }
+    
+    
+
+
 }
