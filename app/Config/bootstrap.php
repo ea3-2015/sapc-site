@@ -72,6 +72,7 @@ Cache::config('default', array('engine' => 'File'));
 CakePlugin::load('DebugKit');
 CakePlugin::load('Upload');
 CakePlugin::load('CakePdf', array('bootstrap' => true, 'routes' => true));
+CakePlugin::load('AclExtras');
 
 
 /**

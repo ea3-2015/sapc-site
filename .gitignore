@@ -39,3 +39,4 @@ Thumbs.db
 /app/Plugin/DebugKit
 /app/Plugin/CakePdf
 /app/Plugin/Upload
+/app/Plugin/AclExtras
