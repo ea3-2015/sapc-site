@@ -69,7 +69,9 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
-CakePlugin::loadAll();
+CakePlugin::load('DebugKit');
+CakePlugin::load('Upload');
+CakePlugin::load('CakePdf', array('bootstrap' => true, 'routes' => true));
 
 
 /**
@@ -114,6 +116,3 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-//DebugKit
-CakePlugin::load('DebugKit');
-CakePlugin::load('Upload');
