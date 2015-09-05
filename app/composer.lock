@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ea5c9989b59786282584f62305914b04",
+    "hash": "d460145a61834a965472b55b29c35957",
     "packages": [
         {
             "name": "composer/installers",
@@ -136,6 +136,169 @@
             "description": "CakePHP plugin for creating and/or rendering Pdf, several Pdf engines supported.",
             "homepage": "https://github.com/FriendsOfCake/CakePdf",
             "time": "2015-05-31 18:06:35"
+        },
+        {
+            "name": "josegonzalez/cakephp-upload",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/josegonzalez/cakephp-upload.git",
+                "reference": "8189986aa538f96a467ceacf246289e2f114ebd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/josegonzalez/cakephp-upload/zipball/8189986aa538f96a467ceacf246289e2f114ebd5",
+                "reference": "8189986aa538f96a467ceacf246289e2f114ebd5",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Upload"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Paling",
+                    "homepage": "https://github.com/joshuapaling",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "sdoney",
+                    "homepage": "https://github.com/sdoney",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Giuliano B",
+                    "homepage": "https://github.com/giulianob",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Justin Slamka",
+                    "homepage": "https://github.com/slamkajs",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Nathan Tyler",
+                    "homepage": "https://github.com/tylerdigital",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Mirko Chialastri",
+                    "homepage": "https://github.com/hiryu85",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Benjamin Allison",
+                    "homepage": "https://github.com/benjaminallison",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Ariel Patschiki",
+                    "homepage": "https://github.com/arielpts",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "lucfranken",
+                    "homepage": "https://github.com/lucfranken",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "cpierce",
+                    "homepage": "https://github.com/cpierce",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Barry Chapman",
+                    "homepage": "https://github.com/barrychapman",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Thomas Edvalson",
+                    "homepage": "https://github.com/Cruel",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Alejandro Ibarra",
+                    "homepage": "https://github.com/ajibarra",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "simkimsia",
+                    "homepage": "https://github.com/simkimsia",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Callum Macdonald",
+                    "homepage": "https://github.com/chmac",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "David Kullmann",
+                    "homepage": "https://github.com/dkullmann",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Juan Basso",
+                    "homepage": "https://github.com/jrbasso",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Cauan Cabral",
+                    "homepage": "https://github.com/CauanCabral",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Bryan Crowe",
+                    "homepage": "https://github.com/bcrowe",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Simon Brown",
+                    "homepage": "https://github.com/Simes",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "wilsolutions",
+                    "homepage": "https://github.com/wilsolutions",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Graham Watson",
+                    "homepage": "https://github.com/PhantomWatson",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "ceallred",
+                    "homepage": "https://github.com/ceallred",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Jose Diaz-Gonzalez",
+                    "email": "email@josediazgonzalez.com",
+                    "homepage": "http://josediazgonzalez.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Marc Würth",
+                    "homepage": "https://github.com/ravage84",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "CakePHP plugin to handle file uploading sans ridiculous automagic",
+            "homepage": "http://github.com/josegonzalez/cakephp-upload",
+            "keywords": [
+                "Behavior",
+                "cakephp",
+                "files",
+                "upload"
+            ],
+            "time": "2015-02-17 17:04:31"
         }
     ],
     "packages-dev": [

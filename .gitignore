@@ -38,3 +38,4 @@ Thumbs.db
 /app/vendor
 /app/Plugin/DebugKit
 /app/Plugin/CakePdf
+/app/Plugin/Upload
