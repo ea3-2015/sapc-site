@@ -6586,13 +6586,26 @@ button.close {
 /*# sourceMappingURL=bootstrap.css.map */
 #pfooter{
       text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: Interstate,sans-serif;
+    text-shadow: 0 2px 0 rgb(0, 0, 0);
+
+    margin: auto;
+    padding: 0px 84px;
+    color: rgba(142, 141, 141, 0.85);
+}
+#name{
+      text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
     font-family: Interstate,sans-serif;
-    padding: 0;
+    text-align: center;
     margin: auto;
-    padding: 4px 63px;
-    color: rgba(142, 141, 141, 0.85);
+    padding: 0px 51px;
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0, 0, 0);
+
 }
 #row-footer{
   margin-right: 15px;
@@ -6602,14 +6615,14 @@ button.close {
 .pull-4 {
     position: absolute;
     right: 72.33333%;
-    margin-top: 11px;
+    margin-top: 6px;
     
   }
 .pull-8 {
       position: relative;
-    left: 55.66667%;
+    left: 61.66667%;
     right: auto;
-    margin-top: 53px;
+    margin-top: 62px;
 }
 .footer-links {
       margin: 0;
@@ -6622,14 +6635,17 @@ button.close {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.875em;
+    text-shadow: 0 2px 0 rgb(0, 0, 0);
+
 }
 .footer img {
-        margin: -3px;
+    margin: -26px;
     padding: 0;
     border: 0;
-    border-radius: 12px;
+    border-radius: 523px;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
     box-shadow: 0px 4px 18px #000000;
+    width: 65px;
 }

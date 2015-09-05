@@ -151,10 +151,17 @@
                        <p id="pfooter">Copyright &copy; Sitio web 2015</p>
                 </div>
                 <div class="pull-8">
-                    
-                    <p id="pfooter" aling"center">Desarrollado: 
-                       Emanuel Torres Clemente - Frontend<br>
-                       Nelson Martell - Backend</p>
+       <table>
+       <tr>        
+            <td><img src="../img/EmanuelTorres.jpg"></td>
+            <td><p id="name">EMANUEL TORRES C.</p>
+            <p id="name">Frontend</p></td>
+      
+            <td><img src="../img/NelsonMartell.jpg"></td> 
+            <td><p id="name">Nelson Martell</p>
+            <p id="name">Backend</td>
+      </tr>
+      </table>
                 </div>
 
 
