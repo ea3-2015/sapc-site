@@ -33,14 +33,9 @@ body {
     -o-background-size: cover;
 }
 
-<<<<<<< HEAD
 .footer {
         margin-top: 50px;
     background:rgba(74, 0, 0, 0.84);
     padding: 50px 0;
     
-=======
-footer {
-    margin: 50px 0;
->>>>>>> a837ba6416b445658154bc8ef5e4e7d5d54153a1
 }
