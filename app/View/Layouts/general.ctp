@@ -118,11 +118,11 @@
 
                 <!-- Side Widget Well -->
                 <div class="well">
-<<<<<<< HEAD
+
                     <h4>Paginas Amigas</h4>
-=======
+
                     <h4>Side Widget Well</h4>
->>>>>>> a837ba6416b445658154bc8ef5e4e7d5d54153a1
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
@@ -133,7 +133,7 @@
 
         <hr>
         <!-- Footer -->
-<<<<<<< HEAD
+
         
     </div>
     <footer class= "footer">
@@ -157,21 +157,11 @@
                        Nelson Martell - Backend</p>
                 </div>
 
-=======
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
->>>>>>> a837ba6416b445658154bc8ef5e4e7d5d54153a1
-            </div>
-            <!-- /.row -->
-        </footer>
 
-<<<<<<< HEAD
-=======
+        
+
     </div>
->>>>>>> a837ba6416b445658154bc8ef5e4e7d5d54153a1
+
 </body>
 
 </html>
