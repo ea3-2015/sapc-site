@@ -7,7 +7,6 @@
 /plugins
 /plugin
 /Plugin
-/app/Plugin/DebugKit
 /vendors
 /vendor
 /build
@@ -37,3 +36,7 @@ Thumbs.db
 #composer.lock
 /vendor
 /app/vendor
+/app/Plugin/DebugKit
+/app/Plugin/CakePdf
+/app/Plugin/Upload
+/app/Plugin/AclExtras
