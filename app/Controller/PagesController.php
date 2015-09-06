@@ -51,7 +51,7 @@ class PagesController extends AppController
 
         $count = count($path);
         if (!$count) {
-            return $this->redirect('/');
+            return $this->redirect('noticias/');
         }
         $page = $subpage = $title_for_layout = null;
 
@@ -67,7 +67,7 @@ class PagesController extends AppController
         $this->set(compact('page', 'subpage', 'title_for_layout'));
 
         try {
-            $this->render(implode('/', $path));
+            $this->render(implode('noticias/', $path));
         } catch (MissingViewException $e) {
             if (Configure::read('debug')) {
                 throw $e;
