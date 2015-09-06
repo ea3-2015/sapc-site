@@ -299,7 +299,7 @@
         </key>
         <comment>Tabla de Internacionalización para CakePHP</comment>
     </table>
-    <table x="954" y="376" name="cake_sessions">
+    <table x="919" y="415" name="cake_sessions">
         <row name="id" null="0" autoincrement="0">
             <datatype>VARCHAR(255)</datatype>
         </row>
@@ -328,5 +328,43 @@
             <part>id</part>
         </key>
         <comment>Género (Masculino o Femenino)</comment>
+    </table>
+    <table x="952" y="124" name="attachments">
+        <row name="id" null="0" autoincrement="1">
+            <datatype>INT(11)</datatype>
+        </row>
+        <row name="model" null="0" autoincrement="0">
+            <datatype>VARCHAR(30)</datatype>
+        </row>
+        <row name="foreign_key" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <comment>Clave foránea polimórfica</comment>
+        </row>
+        <row name="name" null="0" autoincrement="0">
+            <datatype>VARCHAR(32)</datatype>
+        </row>
+        <row name="attachment" null="0" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+        </row>
+        <row name="dir" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="type" null="1" autoincrement="0">
+            <datatype>VARCHAR(255)</datatype>
+            <default>NULL</default>
+        </row>
+        <row name="size" null="0" autoincrement="0">
+            <datatype>INT(11)</datatype>
+            <default>0</default>
+        </row>
+        <row name="active" null="0" autoincrement="0">
+            <datatype>TINYINT(1)</datatype>
+            <default>1</default>
+        </row>
+        <key type="PRIMARY" name="">
+            <part>id</part>
+        </key>
+        <comment>Archivos adjuntos. Tabla polimórfica</comment>
     </table>
 </sql>
