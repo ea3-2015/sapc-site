@@ -1269,7 +1269,8 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 38px;
+  font-family: Georgia,"Times New Roman",Times,serif;
 }
 h2,
 .h2 {
@@ -2105,6 +2106,7 @@ pre code {
   }
   .col-lg-8 {
     width: 66.66666667%;
+    margin-top: 56px;
   }
   .col-lg-7 {
     width: 58.33333333%;
@@ -6584,6 +6586,15 @@ button.close {
   clear: both;
 }
 /*# sourceMappingURL=bootstrap.css.map */
+#parrafo{
+      
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Interstate,sans-serif;
+    margin: auto;
+    padding: 29px 0px;
+    color: #000;
+}
 #pfooter{
       text-transform: uppercase;
     font-size: 12px;

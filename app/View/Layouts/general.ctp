@@ -41,9 +41,11 @@
       </a>
       <div class="nav-collapse collase">
         <ul class="nav navbar-nav">  
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="#">INICIO</a></li>
+          <li><a href="#">MISI&Oacute;N</a></li>
+          <li><a href="#">VISI&Oacute;N</a></li>
+          <li><a href="#">LEYES</a></li>
+          <li><a href="#">CONTACTENOS</a></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
@@ -141,10 +143,10 @@
                 <div class="pull-4">
                         <ul class="footer-links">
                             <li class="li-footer"><a href="#">INICIO</a></li>
-                            <li class="li-footer"><a href="#">LEYES</li>
                             <li class="li-footer"><a href="#">MISION</li>
                             <li class="li-footer"><a href="#">VISION</li>
-                            <li class="li-footer"><a href="#">CONTACTANOS</a></li>
+                            <li class="li-footer"><a href="#">LEYES</li>
+                            <li class="li-footer"><a href="#">CONTACTENOS</a></li>
                             
                         </ul>
              
@@ -153,11 +155,11 @@
                 <div class="pull-8">
        <table>
        <tr>        
-            <td><img src="../img/EmanuelTorres.jpg"></td>
+            <td><img src="../sapc-site/app/img/EmanuelTorres.jpg"></td>
             <td><p id="name">EMANUEL TORRES C.</p>
             <p id="name">Frontend</p></td>
       
-            <td><img src="../img/NelsonMartell.jpg"></td> 
+            <td><img src="../sapc-site/app/img/NelsonMartell.jpg"></td> 
             <td><p id="name">Nelson Martell</p>
             <p id="name">Backend</td>
       </tr>
