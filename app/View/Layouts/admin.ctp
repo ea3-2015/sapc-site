@@ -18,7 +18,7 @@
         echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('jquery.min'));
         echo $this->Html->script(array('scripts'));
-        echo $this->Html->script(array('scripts2'));
+       // echo $this->Html->script(array('scripts2'));
     ?>
     <?= $this->Html->meta('icon'); ?>
 
@@ -108,7 +108,7 @@
     <div class="col-sm-3">
       <!-- Left column -->
 
-      <hr>
+     
 
       <ul class="list-unstyled">
         <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">

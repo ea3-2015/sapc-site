@@ -7,25 +7,78 @@
     <?php
         echo $this->Html->css(array('blog-min'));
         echo $this->Html->css(array('blog-bootstrap'));
+       // echo $this->Html->css(array('bootstrap.min'));
         echo $this->Html->css(array('blog-post'));
         echo $this->Html->css(array('full-slider'));
         echo $this->Html->css(array('modern-business'));
+        echo $this->Html->css(array('hover'));
 
-        //echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
+
+        echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
         echo $this->Html->script(array('blog-bootstrap'));
      echo $this->Html->script(array('blog-bootstrap.min'));
         echo $this->Html->script(array('blog-jquery'));
         echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('jquery.min'));
+        echo $this->Html->script(array('jquery-2.1.3'));
         echo $this->Html->script(array('scripts'));
-        echo $this->Html->script(array('scripts2'));
+        
         
     ?>
   </head>
   <body>
   
-        <?php echo $this->element('slider');?>
+       <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill">
+                    <center>
+                    <img src="../app/webroot/img/foto1.jpg" class="img-responsive">
+                    </center>
+                </div>
+                <div class="carousel-caption">
+                    <h2>&nbsp;</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" >
+                     <center>
+                    <img src="../sapc-site/app/webroot/img/foto2.jpg" class="img-responsive">
+                    </center>
+                </div>
+                <div class="carousel-caption">
+                    <h2>&nbsp;</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" >
+                    <center>
+                    <img src="../sapc-site/app/webroot/img/foto3.jpg" class="img-responsive">
+                    </center>
+                </div>
+                <div class="carousel-caption">
+                    <h2>&nbsp;</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
     
 <!-- /.navbar -->
 <!-- Navigation -->
@@ -45,8 +98,8 @@
       </a>
       <div class="nav-collapse collase">
         <ul class="nav navbar-nav">  
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">MISI&Oacute;N</a></li>
+          <li><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'), array('class'=>'hvr-underline-reveal')); ?></li>
+          <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'mision', 'action' => 'index'), array('class'=>'hvr-underline-reveal')); ?> </li>
           <li><a href="#">VISI&Oacute;N</a></li>
           <li><a href="#">LEYES</a></li>
           <li><a href="#">CONTACTENOS</a></li>
@@ -159,7 +212,7 @@
                 <div class="pull-8">
        <table>
        <tr>        
-            <td><img src="../sapc-site/app/img/EmanuelTorres.jpg"></td>
+            <td><img src="../img/EmanuelTorres.jpg"></td>
             <td><p id="name">EMANUEL TORRES C.</p>
             <p id="name">Frontend</p></td>
       
