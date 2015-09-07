@@ -14,7 +14,7 @@
 
 <div id="noticias-add" class="panel panel-default">
 
-	
+
 
 	<div class="panel-body" style="overflow: auto;">
 
@@ -24,9 +24,9 @@
 			'label' => array('class' => 'control-label'),
 			'div' => 'form-group',
 			'class' => 'form-control',
-			
-		)
-	), array('type'=>'file', 'novalidate'=>'novalidate' )); ?>
+		),
+		'type' => 'file'
+	));?>
 
 	<fieldset>
 	<?php
@@ -37,9 +37,9 @@
 			echo $this->Form->input('user_id',array(
 					'label'=>'Usuario','class'=>'form-control'));
 
-		   echo $this->Form->input('foto',array('type'=>'file','label'=>'','class'=>'form-control'));
-			echo $this->Form->input('foto_dir',array('type'=>'hidden'));
-							
+            echo $this->Form->input('Image.0.attachment', array('type' => 'file', 'label' => 'Image'));
+			echo $this->Form->input('Image.0.name', array('type' => 'hidden', 'value' => 'img_0'));
+
 	?>
 	</fieldset>
 <?php
@@ -55,7 +55,7 @@
 
 	<div class="panel-footer">
 		<div class="btn-group btn-group-justified" >
-			
+
 			<div class="btn-group" role="group">
 				<?php echo $this->Html->link(__('Lista de Noticias'), array('action' => 'index'), array('class' => 'btn btn-primary')); ?>
 			</div>
@@ -65,8 +65,8 @@
 			<div class="btn-group" role="group">
 				<?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'users', 'action' => 'add'), array('class' => 'btn btn-info')); ?>
 			</div>
-			
-			
+
+
 		</div>
 
 

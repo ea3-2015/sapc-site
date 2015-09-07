@@ -90,6 +90,8 @@ class Noticia extends AppModel {
                 }
             }
         }
+
+        // debug($images);
         $data['Image'] = $images;
 
         // Try to save the data using Model::saveAll()
@@ -99,6 +101,6 @@ class Noticia extends AppModel {
         }
 
         // Throw an exception for the controller
-        throw new Exception(__("This post could not be saved. Please try again"));
+        throw new Exception(__("This news could not be saved. Please try again"));
     }
 }

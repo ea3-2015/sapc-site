@@ -31,7 +31,7 @@ class NoticiasController extends AppController
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
-          
+
     }
     public function npublic()
     {
@@ -40,7 +40,7 @@ class NoticiasController extends AppController
             $this->set('noticias',$this->paginate());
             $this->layout = 'general';
     }
-    
+
 
 /**
  * view method
@@ -57,9 +57,9 @@ class NoticiasController extends AppController
         $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
         $this->set('noticia', $this->Noticia->find('first', $options));
         $this->layout = 'general';
-        
+
     }
-    
+
 
 /**
  * add method
@@ -69,15 +69,17 @@ class NoticiasController extends AppController
     public function add()
     {
         if ($this->request->is('post')) {
-            $this->Noticia->create();
-            if ($this->Noticia->save($this->request->data)) {
-                $this->Flash->success(__('Noticia Guardada.'));
-               
-                return $this->redirect(array('action' => 'index'));
-            } else {
-                $this->Flash->error(__('Noticia no guardada, intente de nuevo.'));
+
+            try {
+				$this->Noticia->createWithAttachments($this->request->data);
+				$this->Flash->success(__('La noticia ha sido guardada.'));
+				return $this->redirect(array('action' => 'index')); //DESACTIVAR PARA DEBUG
+            } catch (Exception $e) {
+				$errorMessage = __('La noticia no pudo se guardada:');
+				$errorMessage .= $e->getMessage(); // Para propósitos de desarrollo
+                $this->Flash->error($errorMessage);
             }
-           
+
         }
            $users = $this->Noticia->User->find('list');
             $this->set(compact('users'));
@@ -131,8 +133,8 @@ class NoticiasController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
     }
-    
-    
+
+
 
 
 }
