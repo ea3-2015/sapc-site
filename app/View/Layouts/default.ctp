@@ -97,7 +97,7 @@
         <ul class="nav navbar-nav">  
           <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
           <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
-          <li><a href="#">VISI&Oacute;N</a></li>
+          <li><?php echo $this->Html->link(__(' VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
           <li><a href="#">LEYES</a></li>
           <li><a href="#">CONTACTENOS</a></li>
         </ul>

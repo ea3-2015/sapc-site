@@ -1,0 +1,2 @@
+<h1>Nuestra Misi&oacute;n</h1>
+<p id="parrafo">Seremos la secretaria del poder popular, instituci&oacute;n orientada al fortalecimiento de un sistema de organizaci&oacute;n e integracion horizontal de las instancias de gobierno en sus tres niveles junto al Poder Popular y sus diversas expresiones socio culturales, en la etica revolucionaria del echo p&uacute;blico, garantizando la participaci&oacute;n protag&oacute;nica de la ciudadania en la gesti&oacute;n p&uacute;blica. </p>

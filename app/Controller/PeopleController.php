@@ -59,6 +59,7 @@ class PeopleController extends AppController {
 		}
 		$genres = $this->Person->Genre->find('list');
 		$this->set(compact('genres'));
+		$this->layout = 'admin';
 	}
 
 /**

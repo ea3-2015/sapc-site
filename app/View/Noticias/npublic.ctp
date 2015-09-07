@@ -11,11 +11,9 @@
 
                 <hr>
 
-                <!-- IMAGEN  PUGLIN UPLOAD REVISAR 
-                <?php echo $this->Html->image('/app/webroot/files/noticia/foto/'. $noticia['Noticia']['foto_dir'].'/'.'vga_'.$noticia['Noticia']['foto']); ?>-->
-                <img src="http://www.noticias365.info/themes/tpl2/img/news/1.png" class="img-responsive">
-
-                <hr>
+                <!-- IMAGEN  PUGLIN UPLOAD REVISAR  -->
+                <?php echo $this->Html->image('/files/image/attachment/'.$noticia['Noticia']['dir'].'/'.'vga__'.$noticia['Noticia']['attachment']); ?>
+               
 
                 <!-- CONTENIDO -->
                 <p class="lead">

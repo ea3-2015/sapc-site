@@ -42,9 +42,9 @@ template {
   display: none;
 }
 a {
-      background-color: transparent;
+      background-color: rgba(150, 146, 6, 0);
       text-decoration: none;
-      color: #37DFFF;
+      color: #0722D2;
 }
 a:active,
 a:hover {
