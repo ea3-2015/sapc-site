@@ -30,4 +30,13 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+    /**
+     * [countItems description]
+     * @param  [type] $all [description]
+     * @return [type]      [description]
+     */
+    public function countItems($all = true) {
+		return $this->find('count');
+	}
 }
