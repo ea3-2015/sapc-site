@@ -42,7 +42,7 @@
             <div class="item active">
                 <div class="fill">
                     <center>
-                    <img src="../app/webroot/img/foto1.jpg" class="img-responsive">
+                    <img src="/html/sapc-site/app/webroot/img/foto1.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -52,7 +52,7 @@
             <div class="item">
                 <div class="fill" >
                      <center>
-                    <img src="../sapc-site/app/webroot/img/foto2.jpg" class="img-responsive">
+                    <img src="/html/sapc-site/app/webroot/img/foto2.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -62,7 +62,7 @@
             <div class="item">
                 <div class="fill" >
                     <center>
-                    <img src="../sapc-site/app/webroot/img/foto3.jpg" class="img-responsive">
+                    <img src="/html/sapc-site/app/webroot/img/foto3.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -212,11 +212,11 @@
                 <div class="pull-8">
        <table>
        <tr>        
-            <td><img src="../img/EmanuelTorres.jpg"></td>
+            <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
             <td><p id="name">EMANUEL TORRES C.</p>
             <p id="name">Frontend</p></td>
       
-            <td><img src="../sapc-site/app/img/NelsonMartell.jpg"></td> 
+            <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
             <td><p id="name">Nelson Martell</p>
             <p id="name">Backend</td>
       </tr>
