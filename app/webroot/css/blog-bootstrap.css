@@ -6582,8 +6582,9 @@ button.close {
 
 .pull-4 {
     position: absolute;
-    right: 71.33333%;
+    right: 73.33333%;
     margin-top: 43px;
+    font-size: 14px;
     
   }
 .pull-8 {

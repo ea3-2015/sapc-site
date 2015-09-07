@@ -98,7 +98,7 @@
           <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
           <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
           <li><?php echo $this->Html->link(__(' VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
-          <li><a href="#">LEYES</a></li>
+          <li><?php echo $this->Html->link(__('FUNDAMENTOS INSTITUCIONALES'), array('controller' => 'pages', 'action' => 'institucionales'),array('class'=>'hvr-sweep-to-top')); ?></li>
           <li><a href="#">CONTACTENOS</a></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
@@ -185,9 +185,8 @@
 
                     <h4>Paginas Amigas</h4>
 
-                    <h4>Side Widget Well</h4>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    <p>###</p>
                 </div>
 
             </div>
