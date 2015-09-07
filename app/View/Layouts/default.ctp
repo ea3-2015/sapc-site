@@ -16,12 +16,12 @@
 
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
-        echo $this->Html->script(array('blog-bootstrap'));
-     echo $this->Html->script(array('blog-bootstrap.min'));
-        echo $this->Html->script(array('blog-jquery'));
-        echo $this->Html->script(array('bootstrap.min'));
-        echo $this->Html->script(array('jquery.min'));
         echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('jquery.min'));
+        echo $this->Html->script(array('blog-jquery'));
+        echo $this->Html->script(array('blog-bootstrap'));
+        echo $this->Html->script(array('blog-bootstrap.min'));
+        echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('scripts'));
         
         
@@ -141,6 +141,11 @@
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
               <?php echo $this->fetch('content'); ?>
+              <center>
+            <paginador><!-- etiqueta personalidad-->
+                <?php echo $this->element('paginador');?>
+            </paginador>
+            </center>
                 
             </div>
 

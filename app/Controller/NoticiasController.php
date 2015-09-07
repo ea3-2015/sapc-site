@@ -17,8 +17,8 @@ class NoticiasController extends AppController
     public $helpers = array('Html','Form','Time','Js');
     public $components = array('Paginator', 'Session','RequestHandler');
     public $paginate = array (
-            'limit' => 3,
-            'order' => array('Noticias.title' => 'asc')
+            'limit' => 5,
+            'order' => array('Noticia.id' => 'desc')
             );
 
 /**
