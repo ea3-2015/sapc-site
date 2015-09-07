@@ -91,8 +91,34 @@ class User extends AppModel {
 			'className' => 'Noticia',
 			'foreignKey' => 'user_id',
 			'dependent' => false,
-			
+
 		)
 	);
+
+	public $actsAs = array('Acl' => array('type' => 'requester'));
+
+	public function parentNode()
+	{
+        if (!$this->id && empty($this->data)) {
+            return null;
+        }
+        if (isset($this->data['User']['group_id'])) {
+            $groupId = $this->data['User']['group_id'];
+        } else {
+            $groupId = $this->field('group_id');
+        }
+        if (!$groupId) {
+            return null;
+        }
+        return array('Group' => array('id' => $groupId));
+    }
+
+   public function beforeSave($options = array())
+   {
+        $this->data['User']['password'] = AuthComponent::password(
+          $this->data['User']['password']
+        );
+        return true;
+    }
 
 }

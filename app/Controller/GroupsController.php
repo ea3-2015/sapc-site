@@ -114,5 +114,9 @@ class GroupsController extends AppController
         $this->layout = 'admin';
     }
 
-
+    public function beforeFilter()
+    {
+        parent::beforeFilter();
+        // $this->Auth->allow(); // Temporal
+    }
 }
