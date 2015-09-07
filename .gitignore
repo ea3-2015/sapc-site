@@ -40,3 +40,7 @@ Thumbs.db
 /app/Plugin/CakePdf
 /app/Plugin/Upload
 /app/Plugin/AclExtras
+
+# Uploads #
+###########
+/app/webroot/files/*/*
