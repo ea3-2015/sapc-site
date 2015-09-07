@@ -100,6 +100,8 @@
           <li><?php echo $this->Html->link(__(' VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
           <li><?php echo $this->Html->link(__('FUNDAMENTOS INSTITUCIONALES'), array('controller' => 'pages', 'action' => 'institucionales'),array('class'=>'hvr-sweep-to-top')); ?></li>
           <li><a href="#">CONTACTENOS</a></li>
+          <li><?php echo $this->Html->link(__('Mapa Guarico'), array('controller' => 'pages', 'action' => 'mapa'),array('class'=>'hvr-sweep-to-top')); ?></li>
+          <li><a href="#">CONTACTENOS</a></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
