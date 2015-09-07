@@ -43,6 +43,8 @@ template {
 }
 a {
       background-color: transparent;
+      color: #37DFFF;
+      text-decoration: none;
 }
 a:active,
 a:hover {
@@ -1100,13 +1102,27 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-a {
-  color: #ffffff;
+.link-footer {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.link-footer:hover,
+.link:focus {
+  color: #C20000;
+  text-decoration: underline;
+}
+.link-footer:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a-footer {
+  color: #07E9FF;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #C20000;
   text-decoration: underline;
 }
 a:focus {
@@ -4160,7 +4176,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  right: 8px;
+  right: 0px;
   left: 0;
   z-index: 1028;
   position: fixed;
@@ -6525,18 +6541,18 @@ button.close {
 }
 #pfooter{
       text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     font-family: Interstate,sans-serif;
     text-shadow: 0 2px 0 rgb(0, 0, 0);
 
     margin: auto;
-    padding: 0px 84px;
+    padding: 0px 71px;
     color: rgba(142, 141, 141, 0.85);
 }
 #name{
       text-transform: uppercase;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 700;
     font-family: Interstate,sans-serif;
     text-align: center;
@@ -6550,12 +6566,12 @@ button.close {
 .pull-4 {
     position: absolute;
     right: 71.33333%;
-    margin-top: 66px;
+    margin-top: 43px;
     
   }
 .pull-8 {
     left: 57.66667%;
-    margin-top: 62px;
+    margin-top: 38px;
     position: absolute;
 }
 .footer-links {

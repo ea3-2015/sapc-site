@@ -205,7 +205,7 @@
             
                 <div class="pull-4">
                         <ul class="footer-links">
-                            <li class="li-footer"><a href="#">INICIO</a></li>
+                            <li class="li-footer"><a href="#" class="link-footer">INICIO</a></li>
                             <li class="li-footer"><a href="#">MISION</a></li>
                             <li class="li-footer"><a href="#">VISION</a></li>
                             <li class="li-footer"><a href="#">LEYES</a></li>
