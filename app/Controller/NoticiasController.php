@@ -31,14 +31,14 @@ class NoticiasController extends AppController
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
-
+            $this->layout = 'admin';
     }
     public function npublic()
     {
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
-            $this->layout = 'general';
+
     }
 
 
@@ -56,7 +56,7 @@ class NoticiasController extends AppController
         }
         $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
         $this->set('noticia', $this->Noticia->find('first', $options));
-        $this->layout = 'general';
+
 
     }
 
@@ -83,6 +83,7 @@ class NoticiasController extends AppController
         }
            $users = $this->Noticia->User->find('list');
             $this->set(compact('users'));
+            $this->layout = 'admin';
     }
 
 /**
@@ -110,6 +111,7 @@ class NoticiasController extends AppController
         }
         $users = $this->Noticia->User->find('list');
             $this->set(compact('users'));
+            $this->layout = 'admin';
     }
 
 /**
@@ -132,6 +134,7 @@ class NoticiasController extends AppController
             $this->Flash->error(__('Noticia no borrada, intente de nuevo'));
         }
         return $this->redirect(array('action' => 'index'));
+        $this->layout = 'admin';
     }
 
 

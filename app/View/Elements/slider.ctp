@@ -12,7 +12,7 @@
             <div class="item active">
                 <div class="fill">
                     <center>
-                    <img src="../img/foto1.jpg" class="img-responsive">
+                    <img src="../app/img/foto1.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -22,7 +22,7 @@
             <div class="item">
                 <div class="fill" >
                      <center>
-                    <img src="../img/foto2.jpg" class="img-responsive">
+                    <img src="../app/img/foto2.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -32,7 +32,7 @@
             <div class="item">
                 <div class="fill" >
                     <center>
-                    <img src="../img/foto3.jpg" class="img-responsive">
+                    <img src="../app/img/foto3.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">

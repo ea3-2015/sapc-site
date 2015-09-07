@@ -25,6 +25,7 @@ class GroupsController extends AppController
     {
         $this->Group->recursive = 0;
         $this->set('groups', $this->Paginator->paginate());
+        $this->layout = 'admin';
     }
 
 /**
@@ -41,6 +42,7 @@ class GroupsController extends AppController
         }
         $options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
         $this->set('group', $this->Group->find('first', $options));
+        $this->layout = 'admin';
     }
 
 /**
@@ -59,7 +61,9 @@ class GroupsController extends AppController
                 $this->Flash->error(__('The group could not be saved. Please, try again.'));
             }
         }
+        $this->layout = 'admin';
     }
+
 
 /**
  * edit method
@@ -84,6 +88,7 @@ class GroupsController extends AppController
             $options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
             $this->request->data = $this->Group->find('first', $options);
         }
+        $this->layout = 'admin';
     }
 
 /**
@@ -106,5 +111,8 @@ class GroupsController extends AppController
             $this->Flash->error(__('The group could not be deleted. Please, try again.'));
         }
         return $this->redirect(array('action' => 'index'));
+        $this->layout = 'admin';
     }
+
+
 }
