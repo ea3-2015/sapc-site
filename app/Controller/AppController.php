@@ -32,5 +32,31 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller
 {
-    public $components = array('Session', 'Flash', 'DebugKit.Toolbar');
+    public $components = array(
+        'Acl',
+        'Auth' => array(
+            'authorize' => array(
+                'Actions' => array('actionPath' => 'controllers')
+            )
+        ),
+        'Session',
+        'Flash',
+        'DebugKit.Toolbar',
+    );
+
+
+
+    public function beforeFilter()
+    {
+      //Configure AuthComponent
+      $this->Auth->loginAction = array(
+         'controller' => 'users',
+         'action' => 'login'
+      );
+      $this->Auth->logoutRedirect = array(
+         'controller' => 'users',
+         'action' => 'login'
+      );
+   }
+
 }

@@ -16,6 +16,10 @@ class UsersController extends AppController
  */
     public $components = array('Paginator');
 
+
+
+    public $layout = 'admin';
+
 /**
  * index method
  *
@@ -117,5 +121,34 @@ class UsersController extends AppController
         }
         return $this->redirect(array('action' => 'index'));
         $this->layout = 'admin';
+    }
+
+
+    public function login()
+    {
+
+		if ($this->Session->read('Auth.User')) {
+			$this->Flash->success('You are logged in!');
+			return $this->redirect('/');
+		}
+
+		if ($this->request->is('post')) {
+			if ($this->Auth->login()) {
+				return $this->redirect($this->Auth->redirectUrl());
+			}
+			$this->Flash->error(__('Your username or password was incorrect.'));
+		}
+	}
+
+	public function logout()
+    {
+		$this->Flash->set(__('Session closed.'));
+		$this->redirect($this->Auth->logout());
+	}
+
+    public function beforeFilter()
+    {
+        parent::beforeFilter();
+        $this->Auth->allow(); // Temporal
     }
 }
