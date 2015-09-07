@@ -80,10 +80,10 @@
     
 <!-- /.navbar -->
 <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
         <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -91,13 +91,12 @@
                 </button>
                 <a class="navbar-brand" href="#">S.A.P.C DEL GU&Aacute;RICO</a>
             </div>
-            <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="glyphicon glyphicon-chevron-down"></span>
+            
       </a>
-      <div class="nav-collapse collase">
+      <div id= "navbarCollapse" class="nav-collapse collase">
         <ul class="nav navbar-nav">  
-          <li><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'), array('class'=>'hvr-underline-reveal')); ?></li>
-          <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'mision', 'action' => 'index'), array('class'=>'hvr-underline-reveal')); ?> </li>
+          <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
+          <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
           <li><a href="#">VISI&Oacute;N</a></li>
           <li><a href="#">LEYES</a></li>
           <li><a href="#">CONTACTENOS</a></li>
@@ -116,21 +115,22 @@
                 </form>
               </ul>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">About</a></li>
-             </ul>
-          </li>  
+              <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+              </li>  
         </ul>
+
       </div>        
             
         </div>
-        <!-- /.container -->
-    </nav>
+        
+</nav>
     
 <div class="container">
 

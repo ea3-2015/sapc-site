@@ -43,8 +43,8 @@ template {
 }
 a {
       background-color: transparent;
-      color: #37DFFF;
       text-decoration: none;
+      color: #37DFFF;
 }
 a:active,
 a:hover {
@@ -1622,8 +1622,8 @@ pre code {
   margin-left: auto;
 }
 .row {
-  margin-right: -117px;
-  margin-left: 91px;
+  margin-right: -118px;
+  margin-left: 90px;
   zoom: initial;;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
@@ -2123,8 +2123,9 @@ pre code {
     width: 75%;
   }
   .col-lg-8 {
-    width: 60.666667%;
+    width: 63.666667%;
     margin-top: 56px;
+    margin-left: -42px;
   }
   .col-lg-7 {
     width: 58.33333333%;
@@ -3897,7 +3898,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-left: -1px;
 }
 .nav {
-  padding-left: 0;
+  padding-left: 0px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -4090,8 +4091,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 39px;
-  margin-bottom: 20px;
+  min-height: 33px;
+  margin-bottom: 23px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4198,10 +4199,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  height: 51px;
-  padding: 15px 15px;
-  font-size: 18px;
+  height: 53px;
+  padding: 11px 15px;
+  font-size: 21px;
   line-height: 20px;
+  font-family: 'Amaranth',sans-serif;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4280,13 +4282,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin: 0;
+    margin: -4px;
+    margin-left: 23px;
   }
   .navbar-nav > li {
-    float: left;
+    float: left;;
   }
   .navbar-nav > li > a {
-    padding-top: 14px;
+    padding-top: 15px;
     padding-bottom: 15px;
   }
 }
@@ -4347,7 +4350,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     position: relative;
     margin-left: 0;
   }
-  .navbar-form .has-feedback .form-control-feedback {
+  .navbar-formas-feedback .form-control-feedback {
     top: 0;
   }
 }
@@ -4419,39 +4422,53 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  border-color: #000000;
+  background-image:-webkit-linear-gradient(top, rgba(80, 0, 0, 0.79), rgba(97, 18, 0, 0.9));;*/
+  background-image: -moz-webkit-linear-gradient(top, rgba(80, 0, 0, 0.79), rgba(97, 18, 0, 0.9));;*/
+  background: #420000;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #FFF;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #000;
-  background-color: #000;
+  color: #FFF;
+  background-color: transparent;
+  font-size: 17px;
+  font-family: 'Amaranth',serif;
+  border-radius: 19px;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #FFF;
+  font-family: 'Amaranth',serif;
+  font-size: 17px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000;
-  background-color: #000;
+ color: #FFF;
+  background-color: transparent;
+  font-size: 17px;
+  font-family: 'Amaranth',serif;
+  border-radius: 24px;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #FFF;
+  background-color: transparent;
+  font-size: 15px;
+  font-family: 'Amaranth',serif;
+  border-radius: 24px;
+
 }
+
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #000;
-  background-color: #000;
+  
 }
 .navbar-default .navbar-toggle {
   border-color: #ddd;
@@ -6536,7 +6553,7 @@ button.close {
     font-weight: 700;
     font-family: Interstate,sans-serif;
     margin: auto;
-    padding: 29px 0px;
+    padding: 23px 4px;
     color: #000;
 }
 #pfooter{

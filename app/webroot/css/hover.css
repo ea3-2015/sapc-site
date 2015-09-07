@@ -1595,8 +1595,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #2098d1;
-  -webkit-transform: scaleY(0);
+  background: rgba(144, 141, 0, 0.69);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
@@ -1606,6 +1605,8 @@
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
+  border-radius: 19px;
+  -webkit-transform: scaleY(0);
 }
 .hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active {
   color: white;
