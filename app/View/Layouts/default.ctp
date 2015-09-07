@@ -98,7 +98,8 @@
           <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
     <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
     <li><?php echo $this->Html->link(__('VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?></li>
-          <li><?php echo $this->Html->link(__(' MAPAS'), array('controller' => 'pages', 'action' => 'mapas'),array('class'=>'hvr-sweep-to-top')); ?>
+    <li><?php echo $this->Html->link(__('LEYES'), array('controller' => 'pages', 'action' => 'institucionales'),array('class'=>'hvr-sweep-to-top')); ?></li>
+          <li><?php echo $this->Html->link(__(' MAPAS'), array('controller' => 'pages', 'action' => 'mapa'),array('class'=>'hvr-sweep-to-top')); ?>
 
           
           <!---<li><a href="#">CONTACTENOS</a></li>-->
@@ -121,10 +122,8 @@
               <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Login</a></li>
-                  <li><a href="#">Profile</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">About</a></li>
+    <li><?= $this->Html->link(__('Administracion'), array('controller' => 'users', 'action' => 'login'));?></li>
+          
                 </ul>
               </li>  
         </ul>
@@ -188,9 +187,7 @@
 
                     <h4>Paginas Amigas</h4>
 
-                    <h4>Side Widget Well</h4>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                    
                 </div>
 
             </div>
