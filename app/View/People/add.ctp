@@ -11,7 +11,7 @@
 	<div class="panel-body" style="overflow: auto;">
 
 <?php
-	echo $this->Form->create('Personas', array(
+	echo $this->Form->create('Person', array(
 		'inputDefaults' => array(
 			'label' => array('class' => 'control-label'),
 			'div' => 'form-group',
