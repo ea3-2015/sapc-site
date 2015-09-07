@@ -195,14 +195,15 @@
 
         
     </div>
-    <footer class= "footer">
-            <div id="row-footer">
+   
+        <footer class= "footer">
+            
                 <div class="pull-4">
                         <ul class="footer-links">
                             <li class="li-footer"><a href="#">INICIO</a></li>
-                            <li class="li-footer"><a href="#">MISION</li>
-                            <li class="li-footer"><a href="#">VISION</li>
-                            <li class="li-footer"><a href="#">LEYES</li>
+                            <li class="li-footer"><a href="#">MISION</a></li>
+                            <li class="li-footer"><a href="#">VISION</a></li>
+                            <li class="li-footer"><a href="#">LEYES</a></li>
                             <li class="li-footer"><a href="#">CONTACTENOS</a></li>
                             
                         </ul>
@@ -210,24 +211,25 @@
                        <p id="pfooter">Copyright &copy; Sitio web 2015</p>
                 </div>
                 <div class="pull-8">
-       <table>
-       <tr>        
-            <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
-            <td><p id="name">EMANUEL TORRES C.</p>
-            <p id="name">Frontend</p></td>
-      
-            <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
-            <td><p id="name">Nelson Martell</p>
-            <p id="name">Backend</td>
-      </tr>
-      </table>
-                </div>
-
-
-        
+               <table>
+               <tr>        
+                    <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
+                    <td><p id="name">EMANUEL TORRES C.</p>
+                    <p id="name">Frontend</p></td>
+              
+                    <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
+                    <td><p id="name">Nelson Martell</p>
+                    <p id="name">Backend</p></td>
+              </tr>
+              </table>
+                        </div>
+              
+  
+  </footer>
 
     </div>
 
+  
 </body>
 
 </html>

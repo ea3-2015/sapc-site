@@ -10,9 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-body {
-  margin: 0;
-}
+
 article,
 aside,
 details,
@@ -186,7 +184,7 @@ table {
 }
 td,
 th {
-  padding: 0;
+  padding: -13px;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -1091,6 +1089,8 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
+  padding-top: 50px; 
+  height: auto;
 }
 input,
 button,
@@ -1582,7 +1582,6 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto;
 }
 @media (min-width: 768px) {
   .container {
@@ -1596,8 +1595,8 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
     margin-top: 18px;
+    width: 1144px;
   }
 }
 .container-fluid {
@@ -2105,7 +2104,7 @@ pre code {
     width: 75%;
   }
   .col-lg-8 {
-    width: 66.66666667%;
+    width: 56.666667%;
     margin-top: 56px;
   }
   .col-lg-7 {
@@ -4072,7 +4071,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 49px;
+  min-height: 39px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4158,10 +4157,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-  position: fixed;
-  right: 0;
+  right: 8px;
   left: 0;
-  z-index: 1030;
+  z-index: 1028;
+  position: fixed;
 }
 @media (min-width: 768px) {
   .navbar-fixed-top,
@@ -6301,8 +6300,10 @@ button.close {
 .carousel {
   
   width: auto;
-  margin-top: -50px;
+  margin-top: -79px;
+  margin-left: -8px;
   box-shadow: -1px 7px 25px #000000;
+  margin-right: -8px;
 }
 
 .carousel-inner {
@@ -6542,22 +6543,17 @@ button.close {
     text-shadow: 0 2px 0 rgb(0, 0, 0);
 
 }
-#row-footer{
-  margin-right: 15px;
-  margin-left: 2px;
-  margin-top: -63px;
-}
+
 .pull-4 {
     position: absolute;
-    right: 72.33333%;
-    margin-top: 6px;
+    right: 71.33333%;
+    margin-top: 66px;
     
   }
 .pull-8 {
-      position: relative;
-    left: 61.66667%;
-    right: auto;
+    left: 57.66667%;
     margin-top: 62px;
+    position: absolute;
 }
 .footer-links {
       margin: 0;

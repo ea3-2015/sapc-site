@@ -34,8 +34,19 @@ body {
 }
 
 .footer {
-        margin-top: 50px;
-    background:rgba(74, 0, 0, 0.84);
-    padding: 50px 0;
-    
+  
+    height: 137px;
+    margin-left: -8px;
+    margin-right: -8px;
+    color: #000;
+    font-size: 12px;
+    position: relative;
+    z-index: -2;
+    background-color: #31353a;
+    background-image: -webkit-linear-gradient(top, #500000, #611200);
+}
+#row-footer{
+  margin-top: -63px;
+ 
+  
 }
