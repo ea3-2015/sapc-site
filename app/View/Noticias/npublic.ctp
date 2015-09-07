@@ -12,7 +12,10 @@
                 <hr>
 
                 <!-- IMAGEN  PUGLIN UPLOAD REVISAR  -->
-                <?php echo $this->Html->image('/files/image/attachment/'.$noticia['Noticia']['dir'].'/'.'vga__'.$noticia['Noticia']['attachment']); ?>
+                <?php 
+                    //debug($noticia);
+
+                echo $this->Html->image('/files/image/attachment/'.$noticia['Image'][0]['dir'].'/'.'vga_'.$noticia['Image'][0]['attachment']); ?>
                
 
                 <!-- CONTENIDO -->

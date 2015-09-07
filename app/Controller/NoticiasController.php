@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+
 /**
  * Noticias Controller
  *
@@ -35,7 +36,8 @@ class NoticiasController extends AppController
     }
     public function npublic()
     {
-        $this->Noticia->recursive = 0;
+        $this->Noticia->recursive = 1;
+
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
 
