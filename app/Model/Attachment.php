@@ -27,6 +27,7 @@ class Attachment extends AppModel
                     'size' => 'size',
                 ),
                 'deleteOnUpdate' => true,
+                'deleteFolderOnDelete' => true,
             ),
         ),
     ];

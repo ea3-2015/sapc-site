@@ -61,7 +61,8 @@ class Noticia extends AppModel {
             'conditions' => array(
                 'Image.model' => 'Noticia',
             ),
-            'exclusive' => 'true',
+			'dependent' => true,
+            'exclusive' => true,
         ),
     );
 
