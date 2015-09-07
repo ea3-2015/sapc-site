@@ -17,7 +17,7 @@ $(function () {
             plotShadow: false
         },
         title: {
-            text: 'Personal Registrado '
+            text: 'Usuarios Registrados '
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -65,6 +65,7 @@ $(function () {
 
 
 		</script>
+        <?php $this->layout = 'admin';?>
 	</head>
 	<body>
 <script src="/html/sistema/js/highcharts.js"></script>

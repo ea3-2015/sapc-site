@@ -129,12 +129,10 @@
           </a>
 
             <ul class="list-unstyled collapse" id="menu2">
-                <li><a href="#">Informacion General</a>
+                <li><?php echo $this->Html->link(__(' Registro de Usuarios'), array('controller' => 'pages', 'action' => 'graficas'), array('class'=>'glyphicon glyphicon-home')); ?>
                 </li>
-                <li><a href="#">Registros de Acceso</a>
-                </li>
-                <li><a href="#">Alertas</a>
-                </li>
+                
+
             </ul>
         </li>
         <li class="nav-header">
