@@ -141,7 +141,7 @@
               <?php echo $this->fetch('content'); ?>
               <center>
             <paginador><!-- etiqueta personalidad-->
-                <?php echo $this->element('paginador');?>
+                <?php echo $this->fetch('paginador'); ?>
             </paginador>
             </center>
                 
