@@ -13,8 +13,12 @@ class Attachment extends AppModel
             'attachment' => array(
                 'thumbnailSizes' => array(
                     // 'xvga' => '1024x768',
-                    'vga' => '640x480',
-                    'thumb' => '100l',
+                    'vga'   => '640x480',
+                    // '300f'  => '300x300',
+                    '150f'  => '150x150',
+                    // '100f'  => '100x100',
+                    '150l'  => '150l', // redimensionado respetando relación de aspecto (al ancho o alto).
+                    '600mw' => '600mw' // redimensionado respetando relación de aspecto (ancho máximo)
                 ),
                 'thumbnailMethod'=> 'php',
                 'fields' => array(
