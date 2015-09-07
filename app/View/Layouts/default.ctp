@@ -12,8 +12,6 @@
         echo $this->Html->css(array('full-slider'));
         echo $this->Html->css(array('modern-business'));
         echo $this->Html->css(array('hover'));
-
-
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
         echo $this->Html->script(array('jquery-2.1.3'));
