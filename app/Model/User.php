@@ -99,19 +99,19 @@ class User extends AppModel {
 
 	public function parentNode()
 	{
-		if (!$this->id && empty($this->data)) {
-			return null;
-		}
-		if (isset($this->data['User']['group_id'])) {
-			$groupId = $this->data['User']['group_id'];
-		} else {
-			$groupId = $this->field('group_id');
-		}
-		if (!$groupId) {
-			return null;
-		}
-		return array('Group' => array('id' => $groupId));
-   }
+        if (!$this->id && empty($this->data)) {
+            return null;
+        }
+        if (isset($this->data['User']['group_id'])) {
+            $groupId = $this->data['User']['group_id'];
+        } else {
+            $groupId = $this->field('group_id');
+        }
+        if (!$groupId) {
+            return null;
+        }
+        return array('Group' => array('id' => $groupId));
+    }
 
    public function beforeSave($options = array())
    {

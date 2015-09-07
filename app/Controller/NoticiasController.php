@@ -137,7 +137,10 @@ class NoticiasController extends AppController
         $this->layout = 'admin';
     }
 
-
+    public function beforeFilter()
+    {
+        $this->Auth->allow('npublic', 'view');
+    }
 
 
 }

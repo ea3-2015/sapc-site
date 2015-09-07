@@ -142,13 +142,13 @@ class UsersController extends AppController
 
 	public function logout()
     {
-		$this->Flash->set(__('Session closed.'));
+		$this->Flash->success(__('Session closed.'));
 		$this->redirect($this->Auth->logout());
 	}
 
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow(); // Temporal
+        $this->Auth->allow('logout');
     }
 }

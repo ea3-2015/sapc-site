@@ -117,6 +117,6 @@ class GroupsController extends AppController
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow(); // Temporal
+        // $this->Auth->allow(); // Temporal
     }
 }
