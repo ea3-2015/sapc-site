@@ -73,14 +73,14 @@ class Attachment extends AppModel
                 'rule' => array('isValidMimeType', array('image/jpeg', 'image/png')),
                 'message' => 'El erchivo no es una imágen válida. Sólo se aceptan los formatos "JPEG" y "PNG".'
             ],
-            'isValidDir' => array(
-                'rule' => array('isValidDir'),
-                'message' => 'El directorio de subida de archivos no existe.'
-            ),
-            'isWritable' => array(
-                'rule' => array('isWritable', false),
-                'message' => 'El directorio de subida de archivos es de sólo lectura.'
-            ),
+            // 'isValidDir' => array(
+            //     'rule' => array('isValidDir'),
+            //     'message' => 'El directorio de subida de archivos no existe.'
+            // ),
+            // 'isWritable' => array(
+            //     'rule' => array('isWritable', false),
+            //     'message' => 'El directorio de subida de archivos es de sólo lectura.'
+            // ),
             'isSuccessfulWrite' => array(
                 'rule' => 'isSuccessfulWrite',
                 'message' => 'El archivo adjunto no fue escrito correctamente al servidor.'
