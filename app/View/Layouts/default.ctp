@@ -12,16 +12,14 @@
         echo $this->Html->css(array('full-slider'));
         echo $this->Html->css(array('modern-business'));
         echo $this->Html->css(array('hover'));
-
-
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
-        echo $this->Html->script(array('blog-bootstrap'));
-     echo $this->Html->script(array('blog-bootstrap.min'));
-        echo $this->Html->script(array('blog-jquery'));
-        echo $this->Html->script(array('bootstrap.min'));
-        echo $this->Html->script(array('jquery.min'));
         echo $this->Html->script(array('jquery-2.1.3'));
+        echo $this->Html->script(array('jquery.min'));
+        echo $this->Html->script(array('blog-jquery'));
+        echo $this->Html->script(array('blog-bootstrap'));
+        echo $this->Html->script(array('blog-bootstrap.min'));
+        echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('scripts'));
         
         
@@ -42,7 +40,7 @@
             <div class="item active">
                 <div class="fill">
                     <center>
-                    <img src="../app/webroot/img/foto1.jpg" class="img-responsive">
+                    <img src="/html/sapc-site/app/webroot/img/foto1.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -52,7 +50,7 @@
             <div class="item">
                 <div class="fill" >
                      <center>
-                    <img src="../sapc-site/app/webroot/img/foto2.jpg" class="img-responsive">
+                    <img src="/html/sapc-site/app/webroot/img/foto2.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -62,7 +60,7 @@
             <div class="item">
                 <div class="fill" >
                     <center>
-                    <img src="../sapc-site/app/webroot/img/foto3.jpg" class="img-responsive">
+                    <img src="/html/sapc-site/app/webroot/img/foto3.jpg" class="img-responsive">
                     </center>
                 </div>
                 <div class="carousel-caption">
@@ -82,10 +80,10 @@
     
 <!-- /.navbar -->
 <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
         <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -93,13 +91,12 @@
                 </button>
                 <a class="navbar-brand" href="#">S.A.P.C DEL GU&Aacute;RICO</a>
             </div>
-            <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="glyphicon glyphicon-chevron-down"></span>
+            
       </a>
-      <div class="nav-collapse collase">
+      <div id= "navbarCollapse" class="nav-collapse collase">
         <ul class="nav navbar-nav">  
-          <li><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'), array('class'=>'hvr-underline-reveal')); ?></li>
-          <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'mision', 'action' => 'index'), array('class'=>'hvr-underline-reveal')); ?> </li>
+          <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
+          <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
           <li><a href="#">VISI&Oacute;N</a></li>
           <li><a href="#">LEYES</a></li>
           <li><a href="#">CONTACTENOS</a></li>
@@ -118,21 +115,22 @@
                 </form>
               </ul>
           </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">About</a></li>
-             </ul>
-          </li>  
+              <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">About</a></li>
+                </ul>
+              </li>  
         </ul>
+
       </div>        
             
         </div>
-        <!-- /.container -->
-    </nav>
+        
+</nav>
     
 <div class="container">
 
@@ -141,6 +139,11 @@
             <!-- Blog Post Content Column -->
             <div class="col-lg-8">
               <?php echo $this->fetch('content'); ?>
+              <center>
+            <paginador><!-- etiqueta personalidad-->
+                <?php echo $this->fetch('paginador'); ?>
+            </paginador>
+            </center>
                 
             </div>
 
@@ -165,8 +168,10 @@
                     
                     <div class="row">
                         <div class="col-lg-12">
+                       
                             <a class="twitter-timeline" href="https://twitter.com/rerchacin" data-widget-id="639724662407172096">Tweets por el @rerchacin.</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                          
                         </div>
                         <div class="col-lg-6">
                             
@@ -195,14 +200,15 @@
 
         
     </div>
-    <footer class= "footer">
-            <div id="row-footer">
+   
+        <footer class= "footer">
+            
                 <div class="pull-4">
                         <ul class="footer-links">
-                            <li class="li-footer"><a href="#">INICIO</a></li>
-                            <li class="li-footer"><a href="#">MISION</li>
-                            <li class="li-footer"><a href="#">VISION</li>
-                            <li class="li-footer"><a href="#">LEYES</li>
+                            <li class="li-footer"><a href="#" class="link-footer">INICIO</a></li>
+                            <li class="li-footer"><a href="#">MISION</a></li>
+                            <li class="li-footer"><a href="#">VISION</a></li>
+                            <li class="li-footer"><a href="#">LEYES</a></li>
                             <li class="li-footer"><a href="#">CONTACTENOS</a></li>
                             
                         </ul>
@@ -210,24 +216,25 @@
                        <p id="pfooter">Copyright &copy; Sitio web 2015</p>
                 </div>
                 <div class="pull-8">
-       <table>
-       <tr>        
-            <td><img src="../img/EmanuelTorres.jpg"></td>
-            <td><p id="name">EMANUEL TORRES C.</p>
-            <p id="name">Frontend</p></td>
-      
-            <td><img src="../sapc-site/app/img/NelsonMartell.jpg"></td> 
-            <td><p id="name">Nelson Martell</p>
-            <p id="name">Backend</td>
-      </tr>
-      </table>
-                </div>
-
-
-        
+               <table>
+               <tr>        
+                    <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
+                    <td><p id="name">EMANUEL TORRES C.</p>
+                    <p id="name">Frontend</p></td>
+              
+                    <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
+                    <td><p id="name">Nelson Martell</p>
+                    <p id="name">Backend</p></td>
+              </tr>
+              </table>
+                        </div>
+              
+  
+  </footer>
 
     </div>
 
+  
 </body>
 
 </html>

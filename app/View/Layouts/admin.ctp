@@ -12,13 +12,13 @@
 
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
-        //echo $this->Html->script(array('blog-bootstrap'));
-     //echo $this->Html->script(array('blog-bootstrap.min'));
-        //echo $this->Html->script(array('blog-jquery'));
-        echo $this->Html->script(array('bootstrap.min'));
+        
+        
+        echo $this->Html->script(array('jquery-2.1.3'));
         echo $this->Html->script(array('jquery.min'));
+        echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('scripts'));
-       // echo $this->Html->script(array('scripts2'));
+       //echo $this->Html->script(array('scripts2'));
     ?>
     <?= $this->Html->meta('icon'); ?>
 
@@ -233,106 +233,14 @@
 
 
 
-        <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
 
 
-        <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-
-
+        
 
 
 
 
-        <!-- JavaScript jQuery code from Bootply.com editor  -->
-
-        <script type='text/javascript'>
-
-        $(document).ready(function() {
-
-            $(".alert").addClass("in").fadeOut(5000);
-
-/* swap open/close side menu icons */
-$('[data-toggle=collapse]').click(function(){
-    // toggle icon
-    $(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
-});
-
-        });
-
-        </script>
-
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', 'UA-40413119-1', 'bootply.com');
-          ga('send', 'pageview');
-        </script>
-
-
-        <style>
-            .ad {
-              position: absolute;
-              bottom: 70px;
-              right: 48px;
-              z-index: 992;
-              background-color:#f3f3f3;
-              position: fixed;
-              width: 155px;
-              padding:1px;
-            }
-
-            .ad-btn-hide {
-              position: absolute;
-              top: -10px;
-              left: -12px;
-              background: #fefefe;
-              background: rgba(240,240,240,0.9);
-              border: 0;
-              border-radius: 26px;
-              cursor: pointer;
-              padding: 2px;
-              height: 25px;
-              width: 25px;
-              font-size: 14px;
-              vertical-align:top;
-              outline: 0;
-            }
-
-            .carbon-img {
-              float:left;
-              padding: 10px;
-            }
-
-            .carbon-text {
-              color: #888;
-              display: inline-block;
-              font-family: Verdana;
-              font-size: 11px;
-              font-weight: 400;
-              height: 60px;
-              margin-left: 9px;
-              width: 142px;
-              padding-top: 10px;
-            }
-
-            .carbon-text:hover {
-              color: #666;
-            }
-
-            .carbon-poweredby {
-              color: #6A6A6A;
-              float: left;
-              font-family: Verdana;
-              font-size: 11px;
-              font-weight: 400;
-              margin-left: 10px;
-              margin-top: 13px;
-              text-align: center;
-            }
-        </style>
 
 
 
