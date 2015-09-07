@@ -96,12 +96,13 @@
       <div id= "navbarCollapse" class="nav-collapse collase">
         <ul class="nav navbar-nav">  
           <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
-          <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
-          <li><?php echo $this->Html->link(__(' VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
-          <li><?php echo $this->Html->link(__('FUNDAMENTOS INSTITUCIONALES'), array('controller' => 'pages', 'action' => 'institucionales'),array('class'=>'hvr-sweep-to-top')); ?></li>
-          <li><a href="#">CONTACTENOS</a></li>
-          <li><?php echo $this->Html->link(__('Mapa Guarico'), array('controller' => 'pages', 'action' => 'mapa'),array('class'=>'hvr-sweep-to-top')); ?></li>
-          <li><a href="#">CONTACTENOS</a></li>
+    <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
+    <li><?php echo $this->Html->link(__('VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?></li>
+          <li><?php echo $this->Html->link(__(' MAPAS'), array('controller' => 'pages', 'action' => 'mapas'),array('class'=>'hvr-sweep-to-top')); ?>
+
+          
+          <!---<li><a href="#">CONTACTENOS</a></li>-->
+
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
@@ -187,8 +188,9 @@
 
                     <h4>Paginas Amigas</h4>
 
+                    <h4>Side Widget Well</h4>
 
-                    <p>###</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
             </div>
