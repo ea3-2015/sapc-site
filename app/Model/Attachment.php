@@ -1,9 +1,9 @@
 <?php
 App::uses('AppModel', 'Model');
+
 /**
- * Genre Model
+ * Attachment Model
  *
- * @property Person $Person
  */
 class Attachment extends AppModel
 {
@@ -14,13 +14,16 @@ class Attachment extends AppModel
                 'thumbnailSizes' => array(
                     // 'xvga' => '1024x768',
                     'vga' => '640x480',
-                    'thumb' => '80x80',
+                    'thumb' => '100l',
                 ),
+                'thumbnailMethod'=> 'php',
+                'fields' => array(
+                    'dir' => 'dir',
+                    'type' => 'type',
+                    'size' => 'size',
+                ),
+                'deleteOnUpdate' => true,
             ),
-            'thumbnailMethod'=> 'php',
-            'fields' => array(
-                'dir' => 'dir'
-            )
         ),
     ];
 
@@ -31,8 +34,8 @@ class Attachment extends AppModel
  */
     public $validate = array(
         'model' => array(
-            'notEmpty' => array(
-                'rule' => array('notEmpty'),
+            'notBlank' => array(
+                'rule' => array('notBlank'),
                 //'message' => 'Your custom message here',
                 //'allowEmpty' => false,
                 //'required' => false,
@@ -51,8 +54,8 @@ class Attachment extends AppModel
             ),
         ),
         'name' => array(
-            'notEmpty' => array(
-                'rule' => array('notEmpty'),
+            'notBlank' => array(
+                'rule' => array('notBlank'),
                 //'message' => 'Your custom message here',
                 //'allowEmpty' => false,
                 //'required' => false,
@@ -60,16 +63,25 @@ class Attachment extends AppModel
                 //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
         ),
-        /*'attachment' => array(
-            'notEmpty' => array(
-                'rule' => array('notEmpty'),
-                //'message' => 'Your custom message here',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+        'attachment' => array(
+            'isValidMimeType' => [
+                'rule' => array('isValidMimeType', array('image/jpeg', 'image/png')),
+                'message' => 'El erchivo no es una imágen válida. Sólo se aceptan los formatos "JPEG" y "PNG".'
+            ],
+            'isValidDir' => array(
+                'rule' => array('isValidDir'),
+                'message' => 'El directorio de subida de archivos no existe.'
             ),
-        ),*/
+            'isWritable' => array(
+                'rule' => array('isWritable', false),
+                'message' => 'El directorio de subida de archivos es de sólo lectura.'
+            ),
+            'isSuccessfulWrite' => array(
+                'rule' => 'isSuccessfulWrite',
+                'message' => 'El archivo adjunto no fue escrito correctamente al servidor.'
+            ),
+
+        ),
         'size' => array(
             'numeric' => array(
                 'rule' => array('numeric'),
@@ -90,6 +102,7 @@ class Attachment extends AppModel
                 //'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
         ),
+
     );
 
     public $belongsTo = [
