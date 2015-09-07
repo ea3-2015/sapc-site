@@ -1,5 +1,6 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
 
+
 <h2><?php echo __('User'); ?></h2>
 
 <div id="users-add" class="panel panel-default">

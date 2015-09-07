@@ -25,6 +25,7 @@ class UsersController extends AppController
     {
         $this->User->recursive = 0;
         $this->set('users', $this->Paginator->paginate());
+        $this->layout = 'admin';
     }
 
 /**
@@ -41,6 +42,7 @@ class UsersController extends AppController
         }
         $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
         $this->set('user', $this->User->find('first', $options));
+        $this->layout = 'admin';
     }
 
 /**
@@ -62,6 +64,7 @@ class UsersController extends AppController
         $groups = $this->User->Group->find('list');
         $people = $this->User->Person->find('list');
         $this->set(compact('groups', 'people'));
+        $this->layout = 'admin';
     }
 
 /**
@@ -90,6 +93,7 @@ class UsersController extends AppController
         $groups = $this->User->Group->find('list');
         $people = $this->User->Person->find('list');
         $this->set(compact('groups', 'people'));
+        $this->layout = 'admin';
     }
 
 /**
@@ -112,5 +116,6 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
         return $this->redirect(array('action' => 'index'));
+        $this->layout = 'admin';
     }
 }

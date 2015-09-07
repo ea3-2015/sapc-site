@@ -23,6 +23,7 @@ class PeopleController extends AppController {
 	public function index() {
 		$this->Person->recursive = 0;
 		$this->set('people', $this->Paginator->paginate());
+		$this->layout = 'admin';
 	}
 
 /**
@@ -38,6 +39,7 @@ class PeopleController extends AppController {
 		}
 		$options = array('conditions' => array('Person.' . $this->Person->primaryKey => $id));
 		$this->set('person', $this->Person->find('first', $options));
+		$this->layout = 'admin';
 	}
 
 /**
@@ -83,6 +85,7 @@ class PeopleController extends AppController {
 		}
 		$genres = $this->Person->Genre->find('list');
 		$this->set(compact('genres'));
+		$this->layout = 'admin';
 	}
 
 /**
@@ -104,5 +107,6 @@ class PeopleController extends AppController {
 			$this->Flash->error(__('The person could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
+		$this->layout = 'admin';
 	}
 }

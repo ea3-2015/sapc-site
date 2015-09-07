@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.0.10deb1
+- http://www.phpmyadmin.net
+-
+- Servidor: localhost
+- Tiempo de generación: 04-09-2015 a las 04:58:03
+- Versión del servidor: 5.5.44-0ubuntu0.14.04.1
+- Versión de PHP: 5.5.9-1ubuntu4.11
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="sapc" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="acos">
+                CREATE TABLE `acos` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `parent_id` int(10) DEFAULT NULL,
+                  `model` varchar(255) DEFAULT NULL,
+                  `foreign_key` int(10) DEFAULT NULL,
+                  `alias` varchar(255) DEFAULT NULL,
+                  `lft` int(10) DEFAULT NULL,
+                  `rght` int(10) DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `lft` (`lft`,`rght`),
+                  KEY `alias` (`alias`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='appConfigSchemadb_acl.sql';
+            </pma:table>
+            <pma:table name="aros">
+                CREATE TABLE `aros` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `parent_id` int(10) DEFAULT NULL,
+                  `model` varchar(255) DEFAULT NULL,
+                  `foreign_key` int(10) DEFAULT NULL,
+                  `alias` varchar(255) DEFAULT NULL,
+                  `lft` int(10) DEFAULT NULL,
+                  `rght` int(10) DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `lft` (`lft`,`rght`),
+                  KEY `alias` (`alias`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='appConfigSchemadb_acl.sql';
+            </pma:table>
+            <pma:table name="aros_acos">
+                CREATE TABLE `aros_acos` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `aco_id` int(10) NOT NULL,
+                  `aro_id` int(10) NOT NULL,
+                  `_create` char(2) NOT NULL DEFAULT '0',
+                  `_read` char(2) NOT NULL DEFAULT '0',
+                  `_update` char(2) NOT NULL DEFAULT '0',
+                  `_delete` char(2) NOT NULL DEFAULT '0',
+                  PRIMARY KEY (`id`),
+                  KEY `aco_id` (`aco_id`),
+                  KEY `aro_id` (`aro_id`),
+                  CONSTRAINT `aros_acos_ibfk_1` FOREIGN KEY (`aco_id`) REFERENCES `acos` (`id`),
+                  CONSTRAINT `aros_acos_ibfk_2` FOREIGN KEY (`aro_id`) REFERENCES `aros` (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='appConfigSchemadb_acl.sql';
+            </pma:table>
+            <pma:table name="cake_sessions">
+                CREATE TABLE `cake_sessions` (
+                  `id` varchar(255) NOT NULL,
+                  `data` mediumtext,
+                  `expires` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='appConfigSchemasessions.sql';
+            </pma:table>
+            <pma:table name="genres">
+                CREATE TABLE `genres` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(20) NOT NULL COMMENT 'Masculino o Femenino',
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='Género (Masculino o Femenino)';
+            </pma:table>
+            <pma:table name="groups">
+                CREATE TABLE `groups` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(80) NOT NULL,
+                  `created` datetime DEFAULT NULL,
+                  `modified` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="i18n">
+                CREATE TABLE `i18n` (
+                  `id` int(10) NOT NULL AUTO_INCREMENT,
+                  `locale` varchar(6) NOT NULL,
+                  `model` varchar(255) NOT NULL,
+                  `foreign_key` int(10) NOT NULL,
+                  `field` varchar(255) NOT NULL,
+                  `content` mediumtext,
+                  PRIMARY KEY (`id`),
+                  KEY `locale` (`locale`),
+                  KEY `model` (`model`),
+                  KEY `foreign_key` (`foreign_key`),
+                  KEY `field` (`field`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de Internacionalización para CakePHP';
+            </pma:table>
+            <pma:table name="noticias">
+                CREATE TABLE `noticias` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `title` varchar(60) NOT NULL,
+                  `content` mediumtext,
+                  `foto` varchar(255) NOT NULL,
+                  `foto_dir` varchar(255) NOT NULL,
+                  `user_id` int(11) NOT NULL,
+                  `created` datetime DEFAULT NULL,
+                  `modified` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `user_id` (`user_id`),
+                  CONSTRAINT `noticias_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="people">
+                CREATE TABLE `people` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) DEFAULT NULL,
+                  `last_name` varchar(255) DEFAULT NULL,
+                  `genre_id` int(11) NOT NULL,
+                  `created` datetime DEFAULT NULL,
+                  `modified` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  KEY `genre_id` (`genre_id`),
+                  CONSTRAINT `people_ibfk_1` FOREIGN KEY (`genre_id`) REFERENCES `genres` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `username` varchar(255) NOT NULL,
+                  `password` varchar(100) NOT NULL,
+                  `email` varchar(255) DEFAULT NULL,
+                  `group_id` int(11) NOT NULL,
+                  `person_id` int(11) NOT NULL,
+                  `created` datetime DEFAULT NULL,
+                  `modified` datetime DEFAULT NULL,
+                  PRIMARY KEY (`id`),
+                  UNIQUE KEY `username` (`username`),
+                  KEY `group_id` (`group_id`),
+                  KEY `person_id` (`person_id`),
+                  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`),
+                  CONSTRAINT `users_ibfk_2` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'sapc'
+    -->
+    <database name="sapc">
+        <!-- Tabla acos -->
+        <!-- Tabla aros -->
+        <!-- Tabla aros_acos -->
+        <!-- Tabla cake_sessions -->
+        <!-- Tabla genres -->
+        <table name="genres">
+            <column name="id">1</column>
+            <column name="name">Femenino</column>
+        </table>
+        <table name="genres">
+            <column name="id">2</column>
+            <column name="name">Masculino</column>
+        </table>
+        <!-- Tabla groups -->
+        <table name="groups">
+            <column name="id">1</column>
+            <column name="name">Admin</column>
+            <column name="created">2015-08-31 02:39:55</column>
+            <column name="modified">2015-08-31 02:39:55</column>
+        </table>
+        <!-- Tabla i18n -->
+        <!-- Tabla noticias -->
+        <table name="noticias">
+            <column name="id">30</column>
+            <column name="title">Jose Mora Obtuvo Medalla de Plata </column>
+            <column name="content">Nuevamente el deporte guariqueÃ±o continÃºa enriqueciendo el esfuerzo y la dedicaciÃ³n por los atletas de esta entidad, en nombre del ardor trabajo realizado por el gobernador RamÃ³n RodrÃ­guez ChacÃ­n y el Presidente del Instituto Regional de Deporte del Estado GuÃ¡rico (Irdeg), Carlos Eduardo Torres Castillo, quienes abogan por la revoluciÃ³n deportiva.</column>
+            <column name="foto"></column>
+            <column name="foto_dir"></column>
+            <column name="user_id">1</column>
+            <column name="created">2015-09-04 09:20:12</column>
+            <column name="modified">2015-09-04 09:20:12</column>
+        </table>
+        <!-- Tabla people -->
+        <table name="people">
+            <column name="id">1</column>
+            <column name="name">Emanuel</column>
+            <column name="last_name">Torres</column>
+            <column name="genre_id">2</column>
+            <column name="created">2015-08-31 03:02:40</column>
+            <column name="modified">2015-08-31 03:02:40</column>
+        </table>
+        <!-- Tabla users -->
+        <table name="users">
+            <column name="id">1</column>
+            <column name="username">emanueljtc</column>
+            <column name="password">123456</column>
+            <column name="email">emanueljtc@gmail.com</column>
+            <column name="group_id">1</column>
+            <column name="person_id">1</column>
+            <column name="created">2015-08-31 03:03:00</column>
+            <column name="modified">2015-08-31 03:03:14</column>
+        </table>
+    </database>
+</pma_xml_export>

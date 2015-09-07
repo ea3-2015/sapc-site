@@ -1,4 +1,6 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
+
+
 <h2><?php echo __('Person'); ?></h2>
 
 <div id="people-view" class="panel panel-default">

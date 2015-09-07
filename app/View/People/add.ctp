@@ -1,11 +1,11 @@
 <!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
 
-<h2><?php echo __('Person'); ?></h2>
+<h2><?php echo __('Personas'); ?></h2>
 
 <div id="people-add" class="panel panel-default">
 
 	<div class="panel-heading">
-		<h3 class="panel-title"><?php echo __('Add Person'); ?></h3>
+		<h3 class="panel-title"><?php echo __('Añadir Persona'); ?></h3>
 	</div>
 
 	<div class="panel-body" style="overflow: auto;">
