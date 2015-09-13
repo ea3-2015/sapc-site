@@ -33,6 +33,7 @@
                                             ))
                             ?>
                 </p>
+           <?php echo $this->Html->link(__('Seguir Leyendo'), array('action' => 'view', $noticia['Noticia']['id']), array('class' => 'btn btn-info')); ?>
                 <br />
                 
 
