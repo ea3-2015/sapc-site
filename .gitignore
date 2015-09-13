@@ -36,10 +36,9 @@ Thumbs.db
 #composer.lock
 /vendor
 /app/vendor
-/app/Plugin/DebugKit
-/app/Plugin/CakePdf
-/app/Plugin/Upload
-/app/Plugin/AclExtras
+/app/Plugin/*.*
+/app/Plugin/**/
+
 
 # Uploads #
 ###########
