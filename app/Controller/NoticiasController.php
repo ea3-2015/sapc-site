@@ -27,14 +27,15 @@ class NoticiasController extends AppController
  *
  * @return void
  */
-    public function index()
+    public function admin_index()
     {
         $this->Noticia->recursive = 0;
         $this->Paginator->settings =$this->paginate;
             $this->set('noticias',$this->paginate());
             $this->layout = 'admin';
     }
-    public function npublic()
+
+    public function index()
     {
         $this->Noticia->recursive = 1;
 
@@ -43,6 +44,15 @@ class NoticiasController extends AppController
 
     }
 
+
+    public function admin_view($id = null)
+    {
+        if (!$this->Noticia->exists($id)) {
+            throw new NotFoundException(__('Noticia Invalida'));
+        }
+        $options = array('conditions' => array('Noticia.' . $this->Noticia->primaryKey => $id));
+        $this->set('noticia', $this->Noticia->find('first', $options));
+    }
 
 /**
  * view method
@@ -68,7 +78,7 @@ class NoticiasController extends AppController
  *
  * @return void
  */
-    public function add()
+    public function admin_add()
     {
         if ($this->request->is('post')) {
 
@@ -95,7 +105,7 @@ class NoticiasController extends AppController
  * @param string $id
  * @return void
  */
-    public function edit($id = null)
+    public function admin_edit($id = null)
     {
         if (!$this->Noticia->exists($id)) {
             throw new NotFoundException(__('Noticia Invalida'));
@@ -123,7 +133,7 @@ class NoticiasController extends AppController
  * @param string $id
  * @return void
  */
-    public function delete($id = null)
+    public function admin_delete($id = null)
     {
         $this->Noticia->id = $id;
         if (!$this->Noticia->exists()) {
@@ -141,7 +151,7 @@ class NoticiasController extends AppController
 
     public function beforeFilter()
     {
-        $this->Auth->allow('npublic', 'view');
+        $this->Auth->allow('index', 'view');
     }
 
 

@@ -1,68 +1,50 @@
-<!-- View baked using a 'pretty_cake' template: http://nelson6e65.github.io/pretty_cake -->
+				<!-- Titulo -->
+                <?php foreach ($noticias as $noticia): ?>
+                <h1><?php echo h($noticia['Noticia']['title']); ?></h1>
 
-<h2><?php echo __('Lista de Noticias'); ?></h2>
+                
+                <hr>
 
-<div id="people-index" class="panel panel-default">
-    
-    <div class="panel-body" style="overflow: auto;">
+                <!-- FECHA -->
+                <p><span class="glyphicon glyphicon-time"></span> 
+							<?php echo h($noticia['Noticia']['modified']); ?></p>
 
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    
-                    <th><?php echo $this->Paginator->sort('Title'); ?></th>
-                    <th><?php echo $this->Paginator->sort('Creado'); ?></th>
-                    <th><?php echo $this->Paginator->sort('Modificado')?></th>
-                    
-                    <th ><?php echo __('Actions'); ?></th>
-                </tr>
-            </thead>
+                <hr>
 
-            <tbody>
-    <?php foreach ($noticias as $noticia): ?>
-                <tr>
-                    
-                    <td><?php echo h($noticia['Noticia']['title']); ?></td>
-                    <td><?php echo h($noticia['Noticia']['created']); ?></td>
-                    
-                    <td><?php echo h($noticia['Noticia']['modified']); ?></td>
-                    
-                    <td class="actions" >
-                        
+                <!-- IMAGEN  PUGLIN UPLOAD REVISAR  -->
+                <?php 
+                    //debug($noticia);
 
-                            <?php echo $this->Html->link(__(''), array('action' => 'view', $noticia['Noticia']['id']), array('class' => 'glyphicon glyphicon-search')); ?>
-                            
+                echo $this->Html->image('/files/image/attachment/'.$noticia['Image'][0]['dir'].'/'.'vga_'.$noticia['Image'][0]['attachment'],array('class'=>'img-noticias')); ?>
+               
 
-                        <?php echo $this->Html->link(__(''), array('action' => 'edit', $noticia['Noticia']['id']), array('class' => 'glyphicon glyphicon-edit')); ?>
+                <!-- CONTENIDO -->
+                <p class="lead">
+                	
+							<?php $contenido = h($noticia['Noticia']['content']); 
+                                    App::uses('String', 'Utility');
 
-                                <?php echo $this->Form->postLink('<i class="fa fa-trash-o fa-fw"></i> ' . __(''), array('action' => 'delete', $noticia['Noticia']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $noticia['Noticia']['id'])); ?>
-                            
+                                        echo String::truncate(
+                                            $contenido,
+                                            200,
+                                            array(
+                                                'ellipsis' => '...',
+                                                'exact' => false
+                                            ))
+                            ?>
+                </p>
+           <?php echo $this->Html->link(__('Seguir Leyendo'), array('action' => 'view', $noticia['Noticia']['id']), array('class' => 'btn btn-info')); ?>
+                <br />
+                
 
-                        
-                    </td>
-                </tr>
-    <?php endforeach; ?>
-            </tbody>
-        </table>
+                <!-- Posted Comments -->
 
-        
-    </div>
+                <!-- Comment -->
+                
 
-    <center>
-            <paginador><!-- etiqueta personalidad-->
-                <?php echo $this->element('paginador');?>
-            </paginador>
-            </center>
-        </div>
-    <div class="btn-group btn-group-justified">
-        
-            <?php echo $this->Html->link(__('Nueva Noticia'), array('action' => 'add'), array('class' => 'btn btn-info')); ?>
-            <?php echo $this->Html->link(__('Vista Publica'), array('action' => 'npublic'), array('class' => 'btn btn-danger')); ?> 
-            <?php echo $this->Html->link(__('Nuevo Documento'), array('controller' => 'documents', 'action' => 'add'), array('class' => 'btn btn-primary')); ?> 
-        
-    </div>
-</div>
-
-
-
+            	
+			
+		
+			<?php endforeach; ?>
+					
 
