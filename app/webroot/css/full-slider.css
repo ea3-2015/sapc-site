@@ -9,16 +9,20 @@ body {
     height: 100%;
 }
 
-.carousel,
+
 .item,
 .header,
 .active {
     height: 50%;
     position: relative;
 }
-
+.carousel{
+    height: 39%;
+    position: relative;
+}
 .carousel-inner {
     height: 100%;
+    margin-top: 74px;
 }
 
 /* Background images are set within the HTML using inline CSS, not here */
