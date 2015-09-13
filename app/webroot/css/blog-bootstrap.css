@@ -6565,17 +6565,17 @@ button.close {
     text-shadow: 0 2px 0 rgb(0, 0, 0);
 
     margin: auto;
-    padding: 0px 71px;
+    padding: 1px 86px;
     color: rgba(142, 141, 141, 0.85);
 }
 #name{
       text-transform: uppercase;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 700;
     font-family: Interstate,sans-serif;
     text-align: center;
     margin: auto;
-    padding: 0px 51px;
+    padding: 0px 33px;
     color: #fff;
     text-shadow: 0 2px 0 rgb(0, 0, 0);
 
@@ -6589,7 +6589,7 @@ button.close {
     
   }
 .pull-8 {
-    left: 57.66667%;
+    left: 72.66667%;
     margin-top: 38px;
     position: absolute;
 }
@@ -6608,7 +6608,7 @@ button.close {
 
 }
 .footer img {
-    margin: -26px;
+    margin: -16px;
     padding: 0;
     border: 0;
     border-radius: 523px;
@@ -6616,5 +6616,5 @@ button.close {
     font: inherit;
     vertical-align: baseline;
     box-shadow: 0px 4px 18px #000000;
-    width: 65px;
+    width: 42px;
 }
