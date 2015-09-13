@@ -15,21 +15,8 @@
     opacity: 0.8;
 }
 
-/* Home Page Carousel */
 
 
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
-    height: 100%;
-}
-
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
 
 /* 404 Page Styles */
 
