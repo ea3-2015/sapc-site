@@ -21,7 +21,17 @@
                 <!-- CONTENIDO -->
                 <p class="lead">
                 	
-							<?php echo h($noticia['Noticia']['content']); ?>
+							<?php $contenido = h($noticia['Noticia']['content']); 
+                                    App::uses('String', 'Utility');
+
+                                        echo String::truncate(
+                                            $contenido,
+                                            200,
+                                            array(
+                                                'ellipsis' => '...',
+                                                'exact' => false
+                                            ))
+                            ?>
                 </p>
                 <br />
                 
