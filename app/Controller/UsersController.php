@@ -25,7 +25,7 @@ class UsersController extends AppController
  *
  * @return void
  */
-    public function index()
+    public function admin_index()
     {
         $this->User->recursive = 0;
         $this->set('users', $this->Paginator->paginate());
@@ -39,7 +39,7 @@ class UsersController extends AppController
  * @param string $id
  * @return void
  */
-    public function view($id = null)
+    public function admin_view($id = null)
     {
         if (!$this->User->exists($id)) {
             throw new NotFoundException(__('Invalid user'));
@@ -54,7 +54,7 @@ class UsersController extends AppController
  *
  * @return void
  */
-    public function add()
+    public function admin_add()
     {
         if ($this->request->is('post')) {
             $this->User->create();
@@ -78,7 +78,7 @@ class UsersController extends AppController
  * @param string $id
  * @return void
  */
-    public function edit($id = null)
+    public function admin_edit($id = null)
     {
         if (!$this->User->exists($id)) {
             throw new NotFoundException(__('Invalid user'));
@@ -107,7 +107,7 @@ class UsersController extends AppController
  * @param string $id
  * @return void
  */
-    public function delete($id = null)
+    public function admin_delete($id = null)
     {
         $this->User->id = $id;
         if (!$this->User->exists()) {
@@ -126,6 +126,7 @@ class UsersController extends AppController
 
     public function login()
     {
+        $this->layout = 'admin';
 
 		if ($this->Session->read('Auth.User')) {
 			$this->Flash->success('You are logged in!');
@@ -140,15 +141,20 @@ class UsersController extends AppController
 		}
 	}
 
-	public function logout()
+	public function admin_logout()
     {
 		$this->Flash->success(__('Session closed.'));
 		$this->redirect($this->Auth->logout());
 	}
 
+    public function admin_dashboard()
+    {
+        // No hacer nada por el momento. Sólo se muestra la vista.
+    }
+
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow('logout');
+        // $this->Auth->allow('logout');
     }
 }

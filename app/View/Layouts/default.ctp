@@ -21,12 +21,12 @@
         echo $this->Html->script(array('blog-bootstrap.min'));
         echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('scripts'));
-        
-        
+
+
     ?>
   </head>
   <body>
-  
+
        <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -77,7 +77,7 @@
             <span class="icon-next"></span>
         </a>
     </header>
-    
+
 <!-- /.navbar -->
 <!-- Navigation -->
    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -91,17 +91,17 @@
                 </button>
                 <a class="navbar-brand" href="#">S.A.P.C DEL GU&Aacute;RICO</a>
             </div>
-            
+
       </a>
       <div id= "navbarCollapse" class="nav-collapse collase">
-        <ul class="nav navbar-nav">  
+        <ul class="nav navbar-nav">
           <li ><?php echo $this->Html->link(__(' INICIO'), array('controller' => 'noticias', 'action' => 'npublic'),array('class'=>'hvr-sweep-to-top')); ?></li>
     <li><?php echo $this->Html->link(__(' MISION'), array('controller' => 'pages', 'action' => 'mision'),array('class'=>'hvr-sweep-to-top')); ?> </li>
     <li><?php echo $this->Html->link(__('VISION'), array('controller' => 'pages', 'action' => 'vision'),array('class'=>'hvr-sweep-to-top')); ?></li>
     <li><?php echo $this->Html->link(__('LEYES'), array('controller' => 'pages', 'action' => 'institucionales'),array('class'=>'hvr-sweep-to-top')); ?></li>
           <li><?php echo $this->Html->link(__(' MAPAS'), array('controller' => 'pages', 'action' => 'mapa'),array('class'=>'hvr-sweep-to-top')); ?>
 
-          
+
           <!---<li><a href="#">CONTACTENOS</a></li>-->
 
         </ul>
@@ -122,18 +122,18 @@
               <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
                 <ul class="dropdown-menu">
-    <li><?= $this->Html->link(__('Administracion'), array('controller' => 'users', 'action' => 'login'));?></li>
-          
+    <li><?= $this->Html->link(__('Administracion'), array('controller' => 'users', 'action' => 'dashboard', 'admin' => true));?></li>
+
                 </ul>
-              </li>  
+              </li>
         </ul>
 
-      </div>        
-            
+      </div>
+
         </div>
-        
+
 </nav>
-    
+
 <div class="container">
 
         <div class="row">
@@ -146,15 +146,15 @@
                 <?php echo $this->fetch('paginador'); ?>
             </paginador>
             </center>
-                
+
             </div>
 
             <div class="col-md-4">
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    
-                    
+
+
                      <div class="input-group">
                         <input type="text" class="form-control">
                         <span class="input-group-btn">
@@ -162,21 +162,21 @@
                                 <span class="glyphicon glyphicon-search"></span>
                         </button>
                         </span>
-                    </div> 
+                    </div>
                     <!-- /.input-group -->
                 </div>
 
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    
+
                     <div class="row">
                         <div class="col-lg-12">
-                            
+
                             <a class="twitter-timeline" href="https://twitter.com/rerchacin" data-widget-id="639724662407172096">Tweets por el @rerchacin.</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                          
+
                         </div>
-                        
+
                     </div>
                     <!-- /.row -->
                 </div>
@@ -186,7 +186,7 @@
 
                     <?= $this->element('friend-pages');?>
 
-                    
+
                 </div>
 
             </div>
@@ -197,11 +197,11 @@
         <hr>
         <!-- Footer -->
 
-        
+
     </div>
-   
+
         <footer class= "footer">
-            
+
                 <div class="pull-4">
                         <ul class="footer-links">
                             <li class="li-footer"><a href="#" class="link-footer">INICIO</a></li>
@@ -209,29 +209,29 @@
                             <li class="li-footer"><a href="#" class="link-footer">VISION</a></li>
                             <li class="li-footer"><a href="#" class="link-footer">LEYES</a></li>
                             <li class="li-footer"><a href="#" class="link-footer">CONTACTENOS</a></li>
-                            
+
                         </ul>
-             
+
                        <p id="pfooter">Copyright &copy; Sitio web 2015</p>
                 </div>
                 <div class="pull-8">
                <table>
-               <tr>        
+               <tr>
                     <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
                     <td><a id="name" href="https://github.com/emanueljtc">Emanuel Torres C.</a></td>
-              
-                    <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
+
+                    <td><?= $this->Html->image('NelsonMartell.jpg');?></td>
                     <td><a id="name" href="https://nelson6e65.github.io/">Nelson Martell</a></td>
               </tr>
               </table>
                         </div>
-              
-  
+
+
             </footer>
 
-    
 
-  
+
+
 </body>
 
 </html>
