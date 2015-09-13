@@ -220,11 +220,11 @@
                <tr>        
                     <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
                     <td><p id="name">EMANUEL TORRES C.</p>
-                    <p id="name">Frontend</p></td>
+                    <p id="name">0416-6515973</p></td>
               
                     <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
                     <td><p id="name">Nelson Martell</p>
-                    <p id="name">Backend</p></td>
+                    <p id="name">0414-6424776</p></td>
               </tr>
               </table>
                         </div>
