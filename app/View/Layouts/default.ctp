@@ -153,15 +153,16 @@
 
                 <!-- Blog Search Well -->
                 <div class="well">
-                    <h4>Buscar</h4>
-                    <div class="input-group">
+                    
+                    
+                     <div class="input-group">
                         <input type="text" class="form-control">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button">
                                 <span class="glyphicon glyphicon-search"></span>
                         </button>
                         </span>
-                    </div>
+                    </div> 
                     <!-- /.input-group -->
                 </div>
 
@@ -219,12 +220,10 @@
                <table>
                <tr>        
                     <td><?= $this->Html->image('EmanuelTorres.jpg');?></td>
-                    <td><p id="name">EMANUEL TORRES C.</p>
-                    <p id="name">0416-6515973</p></td>
+                    <td><a id="name" href="https://github.com/emanueljtc">Emanuel Torres C.</a></td>
               
                     <td><?= $this->Html->image('NelsonMartell.jpg');?></td> 
-                    <td><p id="name">Nelson Martell</p>
-                    <p id="name">0414-6424776</p></td>
+                    <td><a id="name" href="https://nelson6e65.github.io/">Nelson Martell</a></td>
               </tr>
               </table>
                         </div>
