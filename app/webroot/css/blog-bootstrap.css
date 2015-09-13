@@ -1285,7 +1285,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 38px;
+  font-size: 30px;
   font-family: Georgia,"Times New Roman",Times,serif;
 }
 h2,
@@ -6571,7 +6571,7 @@ button.close {
     text-shadow: 0 2px 0 rgb(0, 0, 0);
 
     margin: auto;
-    padding: 1px 86px;
+    padding: 0px 73px;
     color: rgba(142, 141, 141, 0.85);
 }
 #name{
