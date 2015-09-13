@@ -7,11 +7,17 @@
 
                 <!-- FECHA -->
                 <p><span class="glyphicon glyphicon-time"></span> 
-							<?php echo h($noticia['Noticia']['modified']); ?></p>
+							<?php  $tiempo = h($noticia['Noticia']['created']); 
+                            echo $tiempo;
+                                
+                                
+
+
+                            ?></p>
 
                 <hr>
 
-                <!-- IMAGEN  PUGLIN UPLOAD REVISAR  -->
+              
                 <?php 
                     //debug($noticia);
 
