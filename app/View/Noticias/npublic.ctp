@@ -15,7 +15,7 @@
                 <?php 
                     //debug($noticia);
 
-                echo $this->Html->image('/files/image/attachment/'.$noticia['Image'][0]['dir'].'/'.'vga_'.$noticia['Image'][0]['attachment']); ?>
+                echo $this->Html->image('/files/image/attachment/'.$noticia['Image'][0]['dir'].'/'.'vga_'.$noticia['Image'][0]['attachment'],array('class'=>'img-noticias')); ?>
                
 
                 <!-- CONTENIDO -->
@@ -23,7 +23,7 @@
                 	
 							<?php echo h($noticia['Noticia']['content']); ?>
                 </p>
-
+                <br />
                 
 
                 <!-- Posted Comments -->
