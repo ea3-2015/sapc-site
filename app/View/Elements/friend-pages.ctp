@@ -5,7 +5,7 @@
 		height: 195px;
 	}
 	.h4-amigas{
-		font-size: 24px;
+		font-size: 20px;
 		font-family: 'Times New Roman';
 		text-decoration: underline;
 	}
