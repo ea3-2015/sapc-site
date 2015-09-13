@@ -206,10 +206,10 @@
                 <div class="pull-4">
                         <ul class="footer-links">
                             <li class="li-footer"><a href="#" class="link-footer">INICIO</a></li>
-                            <li class="li-footer"><a href="#">MISION</a></li>
-                            <li class="li-footer"><a href="#">VISION</a></li>
-                            <li class="li-footer"><a href="#">LEYES</a></li>
-                            <li class="li-footer"><a href="#">CONTACTENOS</a></li>
+                            <li class="li-footer"><a href="#" class="link-footer">MISION</a></li>
+                            <li class="li-footer"><a href="#" class="link-footer">VISION</a></li>
+                            <li class="li-footer"><a href="#" class="link-footer">LEYES</a></li>
+                            <li class="li-footer"><a href="#" class="link-footer">CONTACTENOS</a></li>
                             
                         </ul>
              
