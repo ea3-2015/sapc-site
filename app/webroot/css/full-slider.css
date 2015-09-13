@@ -42,7 +42,7 @@ body {
     height: 98px;
     margin-top: 22px;
     margin-left: -8px;
-    margin-right: -8px;
+    margin-right: -48px;
     color: #000;
     font-size: 12px;
     position: relative;
@@ -54,6 +54,7 @@ body {
 }
 #row-footer{
   margin-top: -63px;
+  
  
   
 }

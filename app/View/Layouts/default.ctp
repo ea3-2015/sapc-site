@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <?php
-        echo $this->Html->css(array('blog.min'));
+        //echo $this->Html->css(array('blog.min'));
         echo $this->Html->css(array('blog-bootstrap'));
        // echo $this->Html->css(array('bootstrap.min'));
         echo $this->Html->css(array('blog-post'));
