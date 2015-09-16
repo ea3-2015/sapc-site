@@ -44,3 +44,8 @@ Thumbs.db
 # Uploads #
 ###########
 /app/webroot/files/*/*
+
+# Bower #
+#########
+
+/app/webroot/libs/

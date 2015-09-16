@@ -1,0 +1,25 @@
+{
+  "name": "sapc-site",
+  "version": "0.0.1",
+  "authors": [
+    "Nelson Martell <nelson6e65-dev@yahoo.es>",
+    "Emanuel Torres <>"
+  ],
+  "description": "SAPC site",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.4",
+    "startbootstrap-sb-admin-2": "^1.0.7"
+  },
+  "resolutions": {
+    "font-awesome": "^4.4"
+  }
+}
