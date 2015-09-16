@@ -37,10 +37,11 @@
 			echo $this->Form->input('user_id',array(
 					'label'=>'Usuario','class'=>'form-control'));
 
-            echo $this->Form->input('Image.0.attachment', array('type' => 'file', 'label' => 'Image'));
+            echo $this->Form->input('Image.0.attachment', array('type' => 'file', 'label' => '','class'=>'file btn-warning'));
 			echo $this->Form->input('Image.0.name', array('type' => 'hidden', 'value' => 'img_0'));
 
 	?>
+
 	</fieldset>
 <?php
 	echo $this->Form->end(array(

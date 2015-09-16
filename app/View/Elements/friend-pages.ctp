@@ -21,18 +21,18 @@
 
 	<a class="a-amigas" href="http://guarico.gob.ve"><h4 class="h4-amigas">.:: GOBIERNO GU&Aacute;RICO ::.</h4></a>
 	
+	<?php  echo $this->Html->image('gobernacion.png',array('class'=>'img-amigas'))?>
 	
-	<img class="img-amigas" src="../img/gobernacion.png" alt="GOBIERNO GUARICO">
 	<br>
 
 		<a class="a-amigas" href="http://sibciguarico.gob.ve/"><h4 class="h4-amigas">......:: SIBCI GU&Aacute;RICO ::......</h4></a>
 	
+	<?php  echo $this->Html->image('sibci.jpeg',array('class'=>'img-amigas'))?>
 	
-	<img class="img-amigas" src="../img/sibci.jpeg" alt="SIBCI GUARICO">
 	<br>
 	
 	<a class="a-amigas" href="http://guarico.gob.ve"><h4 class="h4-amigas">................:: CNE ::................</h4></a>
 	
+	<?php  echo $this->Html->image('cne.jpg',array('class'=>'img-amigas'))?>
 	
-	<img class="img-amigas" src="../img/cne.jpg" alt="CNE">
 	<br>

@@ -9,15 +9,16 @@
     <?php
         echo $this->Html->css(array('styles'));
         echo $this->Html->css(array('bootstrap.min'));
-
+        echo $this->Html->css(array('fileinput.min'));
         echo $this->Html->css('/assets/font-awesome/4.4.0/css/font-awesome.min');
 
-        
-        
+
+
         echo $this->Html->script(array('jquery-2.1.3'));
         echo $this->Html->script(array('jquery.min'));
         echo $this->Html->script(array('bootstrap.min'));
         echo $this->Html->script(array('scripts'));
+        echo $this->Html->script(array('fileinput.min'));
        //echo $this->Html->script(array('scripts2'));
     ?>
     <?= $this->Html->meta('icon'); ?>
@@ -25,7 +26,7 @@
     <title>
         S.A.P.C.:<?= $this->fetch('title'); ?>
     </title>
-    
+
     <style type="text/css">
       .navbar-static-top {
         margin-bottom:20px;
@@ -108,7 +109,7 @@
     <div class="col-sm-3">
       <!-- Left column -->
 
-     
+
 
       <ul class="list-unstyled">
         <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">
@@ -131,7 +132,7 @@
             <ul class="list-unstyled collapse" id="menu2">
                 <li><?php echo $this->Html->link(__(' Registro de Usuarios'), array('controller' => 'pages', 'action' => 'graficas'), array('class'=>'glyphicon glyphicon-home')); ?>
                 </li>
-                
+
 
             </ul>
         </li>
@@ -144,7 +145,7 @@
                 <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Facebook</a></li>
                 <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Twitter</a></li>
             </ul>
-        </li> 
+        </li>
       </ul>
       <hr>
          <a href="#"><strong>Devolpers:</strong></a></br>
@@ -231,10 +232,10 @@
 
 
 
-    
 
 
-        
+
+
 
 
 
